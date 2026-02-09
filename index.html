@@ -3,766 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creations By Mariols - Regalos Sorpresa & Charcutería Artesanal</title>
+    <title>Creations By Mariols - Arte en Regalos y Charcutería</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cream: #FFF8F0;
-            --dark-green: #2C4A3F;
-            --gold: #D4A574;
-            --burgundy: #8B2E3C;
-            --soft-white: #FEFEFE;
-            --charcoal: #3A3A3A;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--cream);
-            color: var(--charcoal);
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(to bottom, rgba(255, 248, 240, 0.98), rgba(255, 248, 240, 0));
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            animation: slideDown 0.8s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--dark-green);
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--charcoal);
-            font-weight: 400;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%) scaleX(0);
-            width: 100%;
-            height: 2px;
-            background-color: var(--gold);
-            transition: transform 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            transform: translateX(-50%) scaleX(1);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: radial-gradient(ellipse at center, rgba(212, 165, 116, 0.1), transparent);
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.1); }
-        }
-
-        .hero-content {
-            max-width: 600px;
-            z-index: 2;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 5rem;
-            font-weight: 300;
-            color: var(--dark-green);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: 2px;
-        }
-
-        .hero h1 strong {
-            font-weight: 700;
-            color: var(--burgundy);
-            display: block;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--charcoal);
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            font-weight: 500;
-            letter-spacing: 1px;
-            border-radius: 50px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background-color: var(--dark-green);
-            color: var(--soft-white);
-            box-shadow: 0 10px 30px rgba(44, 74, 63, 0.2);
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(44, 74, 63, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--burgundy);
-            border: 2px solid var(--burgundy);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--burgundy);
-            color: var(--soft-white);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(139, 46, 60, 0.2);
-        }
-
-        .hero-image {
-            position: absolute;
-            right: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 45%;
-            animation: fadeInRight 1s ease-out 0.5s both;
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateY(-50%) translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(-50%) translateX(0);
-            }
-        }
-
-        .hero-image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .image-card {
-            aspect-ratio: 1;
-            background: var(--soft-white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .image-card:hover {
-            transform: scale(1.05) rotate(2deg);
-        }
-
-        .image-card:nth-child(2) {
-            transform: translateY(2rem);
-        }
-
-        .image-card:hover:nth-child(2) {
-            transform: translateY(2rem) scale(1.05) rotate(-2deg);
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--gold), var(--burgundy));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            color: var(--soft-white);
-            opacity: 0.3;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 8rem 5%;
-            background: linear-gradient(to bottom, var(--cream), var(--soft-white));
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
-            color: var(--dark-green);
-            margin-bottom: 4rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--soft-white);
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .feature-card.visible {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 2rem;
-            background: linear-gradient(135deg, var(--dark-green), var(--gold));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: var(--soft-white);
-        }
-
-        .feature-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: var(--dark-green);
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: var(--charcoal);
-            line-height: 1.7;
-            opacity: 0.8;
-        }
-
-        /* Products Section */
-        .products {
-            padding: 8rem 5%;
-            background: var(--soft-white);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 3rem auto 0;
-        }
-
-        .product-card {
-            background: var(--cream);
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-            transform: scale(0.9);
-        }
-
-        .product-card.visible {
-            animation: scaleIn 0.6s ease-out forwards;
-        }
-
-        @keyframes scaleIn {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .product-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-image {
-            height: 300px;
-            background: linear-gradient(135deg, var(--burgundy), var(--dark-green));
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-image::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 5rem;
-            color: rgba(255, 255, 255, 0.2);
-        }
-
-        .product-card:nth-child(1) .product-image::before { content: '🎁'; }
-        .product-card:nth-child(2) .product-image::before { content: '🧀'; }
-        .product-card:nth-child(3) .product-image::before { content: '🎉'; }
-
-        .product-info {
-            padding: 2.5rem;
-        }
-
-        .product-info h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--dark-green);
-            margin-bottom: 1rem;
-        }
-
-        .product-info p {
-            color: var(--charcoal);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            opacity: 0.85;
-        }
-
-        .product-link {
-            color: var(--burgundy);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s ease;
-        }
-
-        .product-link:hover {
-            gap: 1rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 8rem 5%;
-            background: linear-gradient(135deg, var(--dark-green), var(--burgundy));
-            color: var(--soft-white);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(212, 165, 116, 0.2), transparent);
-            border-radius: 50%;
-            animation: float 10s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-30px, 30px); }
-        }
-
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .btn-cta {
-            background: var(--soft-white);
-            color: var(--dark-green);
-            padding: 1.2rem 3rem;
-            font-size: 1.1rem;
-        }
-
-        .btn-cta:hover {
-            background: var(--gold);
-            color: var(--soft-white);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-green);
-            color: var(--soft-white);
-            padding: 4rem 5%;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .footer-text {
-            opacity: 0.8;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            color: var(--soft-white);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--gold);
-            transform: translateY(-5px);
-        }
-
-        .copyright {
-            opacity: 0.6;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 968px) {
-            .hero h1 { font-size: 3.5rem; }
-            .hero-image { display: none; }
-            .section-title { font-size: 2.5rem; }
-            
-            .nav-links {
-                gap: 1.5rem;
-                font-size: 0.85rem;
-            }
-
-            .products-grid,
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.5rem; }
-            .cta-buttons { flex-direction: column; }
-            .btn { width: 100%; text-align: center; }
-            nav { padding: 1rem 3%; }
-            .logo { font-size: 1.5rem; }
-            
-            .nav-links {
-                display: none;
-            }
-        }
-
-        /* Scroll reveal animation */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .scroll-reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Creations By Mariols</div>
-        <ul class="nav-links">
-            <li><a href="Index2.html">Opcion 2</a></li>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-heart">💝</div>
+        <div class="loader-text">CREATIONS BY MARIOLS</div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">Creations By Mariols</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Catalogo</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#testimonios">Consejos</a></li>
+                <li><a href="#contacto" class="cta-nav">Compra Ahora</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
+    <section id="inicio" class="hero">
         <div class="hero-content">
+            <div class="hero-subtitle">✦ Regalos Extraordinarios</div>
             <h1>
-                Momentos Únicos,
-                <strong>Regalos Inolvidables</strong>
+                Creamos Momentos
+                <span class="highlight">Inolvidables</span>
             </h1>
-            <p>
-                Creamos experiencias especiales a través de regalos sorpresa únicos y tablas de charcutería artesanal. 
-                Cada detalle cuenta una historia.
+            <p class="hero-description">
+                Cada regalo es una expresión de amor. Cada tabla de charcutería, una obra de arte culinaria. 
+                Diseñamos experiencias que tocan el corazón y deleitan los sentidos.
             </p>
-            <div class="cta-buttons">
-                <a href="#productos" class="btn btn-primary">Explorar Productos</a>
-                <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn-primary"><span>Explorar Colección</span></a>
+                <a href="#contacto" class="btn-secondary">Personalizar Regalo</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="hero-image-grid">
-                <div class="image-card">
-                    <div class="image-placeholder">🎁</div>
-                </div>
-                <div class="image-card">
-                    <div class="image-placeholder">🧀</div>
-                </div>
+
+        <div class="hero-visual">
+            <div class="hero-image-container">
+                <div class="hero-emoji">🎁</div>
+            </div>
+            <div class="decorative-hearts">
+                <div class="decorative-heart">💕</div>
+                <div class="decorative-heart">💖</div>
+                <div class="decorative-heart">💝</div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="nosotros">
-        <h2 class="section-title">¿Por Qué Elegirnos?</h2>
-        <div class="features-grid">
-            <div class="feature-card scroll-reveal">
-                <div class="feature-icon">✨</div>
-                <h3>Personalización</h3>
-                <p>Cada regalo es único y diseñado especialmente según tus preferencias y la ocasión especial.</p>
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-item">
+                <div class="trust-icon">✨</div>
+                <h3>100% Personalizado</h3>
+                <p>Cada detalle pensado para ti</p>
             </div>
-            <div class="feature-card scroll-reveal">
-                <div class="feature-icon">🎨</div>
-                <h3>Calidad Artesanal</h3>
-                <p>Seleccionamos cuidadosamente cada producto para garantizar la máxima calidad y frescura.</p>
+            <div class="trust-item">
+                <div class="trust-icon">🏆</div>
+                <h3>Calidad Premium</h3>
+                <p>Productos seleccionados</p>
             </div>
-            <div class="feature-card scroll-reveal">
-                <div class="feature-icon">💝</div>
-                <h3>Presentación Elegante</h3>
-                <p>Detalles impecables que convierten cada entrega en una experiencia memorable y especial.</p>
+            <div class="trust-item">
+                <div class="trust-icon">💝</div>
+                <h3>Con Amor</h3>
+                <p>Elaborado con dedicación</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🚚</div>
+                <h3>Entrega Rápida</h3>
+                <p>Directo a tu puerta</p>
             </div>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section class="products" id="productos">
-        <h2 class="section-title">Nuestras Creaciones</h2>
+    <section id="productos" class="products">
+        <div class="section-header fade-in">
+            <div class="section-label">Nuestras Especialidades</div>
+            <h2 class="section-title">Regalos que Enamoran</h2>
+            <p class="section-description">
+                Descubre nuestra exclusiva colección de regalos sorpresa y tablas de charcutería 
+                artesanales, diseñadas para celebrar cada momento especial.
+            </p>
+        </div>
+
         <div class="products-grid">
-            <div class="product-card scroll-reveal">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3>Regalos Sorpresa</h3>
-                    <p>Cajas personalizadas llenas de detalles especiales para sorprender en cualquier ocasión: cumpleaños, aniversarios, celebraciones o simplemente para demostrar afecto.</p>
-                    <a href="#" class="product-link">Ver más →</a>
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <div class="product-emoji">💐</div>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Regalos Románticos</div>
+                    <h3 class="product-title">Cajas de Amor</h3>
+                    <p class="product-description">
+                        Sorpresas personalizadas con flores, chocolates y detalles únicos 
+                        para expresar tus sentimientos más profundos.
+                    </p>
+                    <a href="#" class="product-link">Ver más</a>
                 </div>
             </div>
-            <div class="product-card scroll-reveal">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3>Tablas de Quesos</h3>
-                    <p>Selecciones gourmet de quesos artesanales, acompañados de frutos secos, mermeladas y crackers premium para una experiencia culinaria excepcional.</p>
-                    <a href="#" class="product-link">Ver más →</a>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <div class="product-emoji">🧀</div>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Charcutería Premium</div>
+                    <h3 class="product-title">Tablas Gourmet</h3>
+                    <p class="product-description">
+                        Selección exquisita de quesos artesanales, embutidos de primera 
+                        y acompañamientos perfectamente combinados.
+                    </p>
+                    <a href="#" class="product-link">Ver más</a>
                 </div>
             </div>
-            <div class="product-card scroll-reveal">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3>Paquetes Especiales</h3>
-                    <p>Combinaciones únicas que fusionan nuestros regalos sorpresa con delicias gastronómicas para crear momentos verdaderamente inolvidables.</p>
-                    <a href="#" class="product-link">Ver más →</a>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <div class="product-emoji">🎉</div>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Celebraciones</div>
+                    <h3 class="product-title">Eventos Especiales</h3>
+                    <p class="product-description">
+                        Paquetes personalizados para bodas, aniversarios, cumpleaños 
+                        y momentos que merecen ser inolvidables.
+                    </p>
+                    <a href="#" class="product-link">Ver más</a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <div class="product-emoji">🍫</div>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Delicias Dulces</div>
+                    <h3 class="product-title">Chocolates Artesanales</h3>
+                    <p class="product-description">
+                        Chocolates premium y postres gourmet para endulzar 
+                        los momentos más especiales con tus seres queridos.
+                    </p>
+                    <a href="#" class="product-link">Ver más</a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <div class="product-emoji">🎁</div>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Sorpresas Únicas</div>
+                    <h3 class="product-title">Combos Personalizados</h3>
+                    <p class="product-description">
+                        Combinaciones únicas de regalos y delicias creadas 
+                        especialmente para esa persona tan especial.
+                    </p>
+                    <a href="#" class="product-link">Ver más</a>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <div class="product-emoji">🌹</div>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Amor Eterno</div>
+                    <h3 class="product-title">Arreglos Florales</h3>
+                    <p class="product-description">
+                        Flores frescas y arreglos exclusivos que transmiten 
+                        amor, admiración y los sentimientos más puros.
+                    </p>
+                    <a href="#" class="product-link">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery">
+        <div class="section-header fade-in">
+            <div class="section-label">Inspiración Visual</div>
+            <h2 class="section-title">Nuestras Creaciones</h2>
+            <p class="section-description">
+                Cada producto es una obra maestra elaborada con pasión y dedicación
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">🎀</div>
+            <div class="gallery-item fade-in">🍷</div>
+            <div class="gallery-item fade-in">🥖</div>
+            <div class="gallery-item fade-in">🍓</div>
+            <div class="gallery-item fade-in">💐</div>
+            <div class="gallery-item fade-in">🧁</div>
+            <div class="gallery-item fade-in">🍇</div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="section-header fade-in">
+            <div class="section-label">Testimonios</div>
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <p class="section-description">
+                Historias reales de amor y felicidad compartida
+            </p>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">
+                    La tabla de charcutería que pedí para nuestro aniversario fue simplemente espectacular. 
+                    Cada detalle cuidado con amor. Mi esposo quedó enamorado. ¡Totalmente recomendado!
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">💕</div>
+                    <div class="author-info">
+                        <h4>María González</h4>
+                        <p>Cúcuta</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">
+                    Sorprendí a mi novia con una caja personalizada y no pudo contener las lágrimas de emoción. 
+                    Mariols tiene un don especial para crear momentos mágicos. ¡Gracias infinitas!
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">💖</div>
+                    <div class="author-info">
+                        <h4>Carlos Ramírez</h4>
+                        <p>Cúcuta</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">
+                    Para la fiesta de cumpleaños de mi mejor amiga pedí varios productos y todos quedaron impresionados. 
+                    La calidad, presentación y sabor son excepcionales. Sin duda volveré a ordenar.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">💝</div>
+                    <div class="author-info">
+                        <h4>Ana Martínez</h4>
+                        <p>Cúcuta</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" id="contacto">
+    <section id="contacto" class="cta-section">
         <div class="cta-content">
-            <h2>¿Listo para Sorprender?</h2>
-            <p>Contáctanos y juntos crearemos el regalo perfecto para esa persona especial. Cada creación es única, como el momento que celebras.</p>
-            <a href="#" class="btn btn-cta">Solicitar Cotización</a>
+            <h2>¿Listo para Crear Magia?</h2>
+            <p>
+                Permítenos ser parte de tus momentos más especiales. 
+                Contáctanos hoy y diseñemos juntos el regalo perfecto.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/573001234567" class="btn-white">WhatsApp</a>
+                <a href="mailto:info@creationsbymariols.com" class="btn-outline">Enviar Email</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Creations By Mariols</div>
-            <p class="footer-text">
-                Transformando ocasiones especiales en recuerdos inolvidables
-            </p>
-            <div class="social-links">
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="WhatsApp">💬</a>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Creations By Mariols</h3>
+                <p>
+                    Creando momentos inolvidables desde el corazón. 
+                    Cada regalo cuenta una historia, cada detalle expresa amor.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💬</a>
+                </div>
             </div>
-            <p class="copyright">© 2024 Creations By Mariols. Todos los derechos reservados.</p>
+
+            <div class="footer-column">
+                <h4>Productos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Regalos Sorpresa</a></li>
+                    <li><a href="#">Tablas de Quesos</a></li>
+                    <li><a href="#">Charcutería</a></li>
+                    <li><a href="#">Eventos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Información</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Cómo Ordenar</a></li>
+                    <li><a href="#">Entregas</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="#">📍 Cúcuta, Colombia</a></li>
+                    <li><a href="#">📱 +57 300 123 4567</a></li>
+                    <li><a href="#">📧 info@creationsbymariols.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Creations By Mariols. Todos los derechos reservados. Hecho con amor 💝</p>
         </div>
     </footer>
-
-    <script>
-        // Scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-reveal, .feature-card, .product-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add parallax effect to hero background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero::before');
-            if (scrolled < window.innerHeight) {
-                document.querySelector('.hero').style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
