@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creations By Mariols - Arte en Regalos y Charcutería</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 <body>
     <!-- Loader -->
     <div class="loader">
-        <div class="loader-heart">💝</div>
+        <img src="img/logo.png" alt="Creations By Mariols" class="loader-logo">
         <div class="loader-text">CREATIONS BY MARIOLS</div>
     </div>
 
@@ -22,16 +23,49 @@
     <!-- Header -->
     <header id="header">
         <nav>
-            <div class="logo">Creations By Mariols</div>
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Creations By Mariols" class="logo-img">
+            </a>
             <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Catalogo</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#testimonios">Consejos</a></li>
-                <li><a href="#contacto" class="cta-nav">Carrito</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="html/catalogo.html">Catálogo</a></li>
+                <li><a href="html/galeria.html">Galería</a></li>
+                <li><a href="html/consejos.html">Consejos</a></li>
+                <li>
+                    <a href="#" class="cta-nav cart-toggle" id="cartToggle">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>🛒 Mi Carrito</h2>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="empty-icon">🎁</div>
+                <p>Tu carrito está vacío</p>
+                <p class="empty-subtitle">¡Agrega productos para comenzar!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0</span>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+            <button class="btn-clear-cart" id="clearCart">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
@@ -53,7 +87,7 @@
 
         <div class="hero-visual">
             <div class="hero-image-container">
-                <div class="hero-emoji">🎁</div>
+                <img src="img/ImgProvicional.jpg" alt="Regalo Especial" class="hero-image">
             </div>
             <div class="decorative-hearts">
                 <div class="decorative-heart">💕</div>
@@ -101,9 +135,9 @@
         </div>
 
         <div class="products-grid">
-            <div class="product-card fade-in">
+            <div class="product-card fade-in" data-product='{"id":1,"name":"Cajas de Amor","price":45000,"image":"img/ImgProvicional.jpg","category":"Regalos Románticos"}'>
                 <div class="product-image">
-                    <div class="product-emoji">💐</div>
+                    <img src="img/ImgProvicional.jpg" alt="Cajas de Amor" class="product-img">
                 </div>
                 <div class="product-content">
                     <div class="product-category">Regalos Románticos</div>
@@ -112,13 +146,14 @@
                         Sorpresas personalizadas con flores, chocolates y detalles únicos 
                         para expresar tus sentimientos más profundos.
                     </p>
-                    <a href="#" class="product-link">Ver más</a>
+                    <div class="product-price">$45.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in">
+            <div class="product-card fade-in" data-product='{"id":2,"name":"Tablas Gourmet","price":65000,"image":"img/ImgProvicional2.jpg","category":"Charcutería Premium"}'>
                 <div class="product-image">
-                    <div class="product-emoji">🧀</div>
+                    <img src="img/ImgProvicional2.jpg" alt="Tablas Gourmet" class="product-img">
                 </div>
                 <div class="product-content">
                     <div class="product-category">Charcutería Premium</div>
@@ -127,13 +162,14 @@
                         Selección exquisita de quesos artesanales, embutidos de primera 
                         y acompañamientos perfectamente combinados.
                     </p>
-                    <a href="#" class="product-link">Ver más</a>
+                    <div class="product-price">$65.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in">
+            <div class="product-card fade-in" data-product='{"id":3,"name":"Eventos Especiales","price":120000,"image":"img/ImgProvicional3.jpg","category":"Celebraciones"}'>
                 <div class="product-image">
-                    <div class="product-emoji">🎉</div>
+                    <img src="img/ImgProvicional3.jpg" alt="Eventos Especiales" class="product-img">
                 </div>
                 <div class="product-content">
                     <div class="product-category">Celebraciones</div>
@@ -142,13 +178,14 @@
                         Paquetes personalizados para bodas, aniversarios, cumpleaños 
                         y momentos que merecen ser inolvidables.
                     </p>
-                    <a href="#" class="product-link">Ver más</a>
+                    <div class="product-price">$120.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in">
+            <div class="product-card fade-in" data-product='{"id":4,"name":"Chocolates Artesanales","price":35000,"image":"img/ImgProvicional.jpg","category":"Delicias Dulces"}'>
                 <div class="product-image">
-                    <div class="product-emoji">🍫</div>
+                    <img src="img/ImgProvicional.jpg" alt="Chocolates Artesanales" class="product-img">
                 </div>
                 <div class="product-content">
                     <div class="product-category">Delicias Dulces</div>
@@ -157,13 +194,14 @@
                         Chocolates premium y postres gourmet para endulzar 
                         los momentos más especiales con tus seres queridos.
                     </p>
-                    <a href="#" class="product-link">Ver más</a>
+                    <div class="product-price">$35.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in">
+            <div class="product-card fade-in" data-product='{"id":5,"name":"Combos Personalizados","price":85000,"image":"img/ImgProvicional2.jpg","category":"Sorpresas Únicas"}'>
                 <div class="product-image">
-                    <div class="product-emoji">🎁</div>
+                    <img src="img/ImgProvicional2.jpg" alt="Combos Personalizados" class="product-img">
                 </div>
                 <div class="product-content">
                     <div class="product-category">Sorpresas Únicas</div>
@@ -172,13 +210,14 @@
                         Combinaciones únicas de regalos y delicias creadas 
                         especialmente para esa persona tan especial.
                     </p>
-                    <a href="#" class="product-link">Ver más</a>
+                    <div class="product-price">$85.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in">
+            <div class="product-card fade-in" data-product='{"id":6,"name":"Arreglos Florales","price":55000,"image":"img/ImgProvicional3.jpg","category":"Amor Eterno"}'>
                 <div class="product-image">
-                    <div class="product-emoji">🌹</div>
+                    <img src="img/ImgProvicional3.jpg" alt="Arreglos Florales" class="product-img">
                 </div>
                 <div class="product-content">
                     <div class="product-category">Amor Eterno</div>
@@ -187,7 +226,8 @@
                         Flores frescas y arreglos exclusivos que transmiten 
                         amor, admiración y los sentimientos más puros.
                     </p>
-                    <a href="#" class="product-link">Ver más</a>
+                    <div class="product-price">$55.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
                 </div>
             </div>
         </div>
@@ -204,13 +244,27 @@
         </div>
 
         <div class="gallery-grid">
-            <div class="gallery-item fade-in">🎀</div>
-            <div class="gallery-item fade-in">🍷</div>
-            <div class="gallery-item fade-in">🥖</div>
-            <div class="gallery-item fade-in">🍓</div>
-            <div class="gallery-item fade-in">💐</div>
-            <div class="gallery-item fade-in">🧁</div>
-            <div class="gallery-item fade-in">🍇</div>
+            <div class="gallery-item fade-in">
+                <img src="img/ImgProvicional.jpg" alt="Creación 1">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/ImgProvicional2.jpg" alt="Creación 2">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/ImgProvicional3.jpg" alt="Creación 3">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/ImgProvicional.jpg" alt="Creación 4">
+            </div>
+            <div class="gallery-item fade-in large">
+                <img src="img/ImgProvicional2.jpg" alt="Creación 5">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/ImgProvicional3.jpg" alt="Creación 6">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/ImgProvicional.jpg" alt="Creación 7">
+            </div>
         </div>
     </section>
 
@@ -291,7 +345,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <h3>Creations By Mariols</h3>
+                <img src="img/logo.png" alt="Creations By Mariols" class="footer-logo">
                 <p>
                     Creando momentos inolvidables desde el corazón. 
                     Cada regalo cuenta una historia, cada detalle expresa amor.
@@ -306,10 +360,10 @@
             <div class="footer-column">
                 <h4>Productos</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Regalos Sorpresa</a></li>
-                    <li><a href="#">Tablas de Quesos</a></li>
-                    <li><a href="#">Charcutería</a></li>
-                    <li><a href="#">Eventos</a></li>
+                    <li><a href="html/catalogo.html">Regalos Sorpresa</a></li>
+                    <li><a href="html/catalogo.html">Tablas de Quesos</a></li>
+                    <li><a href="html/catalogo.html">Charcutería</a></li>
+                    <li><a href="html/catalogo.html">Eventos</a></li>
                 </ul>
             </div>
 
@@ -317,7 +371,7 @@
                 <h4>Información</h4>
                 <ul class="footer-links">
                     <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Cómo Ordenar</a></li>
+                    <li><a href="html/consejos.html">Consejos</a></li>
                     <li><a href="#">Entregas</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>

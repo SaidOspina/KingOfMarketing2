@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Creations By Mariols</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Creations By Mariols" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="consejos.html">Consejos</a></li>
+                <li>
+                    <a href="#" class="cta-nav cart-toggle" id="cartToggle">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>🛒 Mi Carrito</h2>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="empty-icon">🎁</div>
+                <p>Tu carrito está vacío</p>
+                <p class="empty-subtitle">¡Agrega productos para comenzar!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0</span>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+            <button class="btn-clear-cart" id="clearCart">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Catalog Hero -->
+    <section class="hero" style="min-height: 60vh; padding-top: 10rem;">
+        <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="hero-subtitle">✦ Nuestra Colección Completa</div>
+            <h1 style="text-align: center;">
+                Catálogo de
+                <span class="highlight">Productos</span>
+            </h1>
+            <p class="hero-description" style="text-align: center;">
+                Descubre todos nuestros productos especiales creados con amor para cada ocasión
+            </p>
+        </div>
+    </section>
+
+    <!-- Full Products Section -->
+    <section class="products" style="padding: 4rem 5%;">
+        <div class="products-grid">
+            <!-- Producto 1 -->
+            <div class="product-card fade-in" data-product='{"id":1,"name":"Cajas de Amor","price":45000,"image":"../img/ImgProvicional.jpg","category":"Regalos Románticos"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional.jpg" alt="Cajas de Amor" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Regalos Románticos</div>
+                    <h3 class="product-title">Cajas de Amor</h3>
+                    <p class="product-description">
+                        Sorpresas personalizadas con flores, chocolates y detalles únicos.
+                    </p>
+                    <div class="product-price">$45.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card fade-in" data-product='{"id":2,"name":"Tablas Gourmet","price":65000,"image":"../img/ImgProvicional2.jpg","category":"Charcutería Premium"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional2.jpg" alt="Tablas Gourmet" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Charcutería Premium</div>
+                    <h3 class="product-title">Tablas Gourmet</h3>
+                    <p class="product-description">
+                        Selección exquisita de quesos artesanales y embutidos premium.
+                    </p>
+                    <div class="product-price">$65.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card fade-in" data-product='{"id":3,"name":"Eventos Especiales","price":120000,"image":"../img/ImgProvicional3.jpg","category":"Celebraciones"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional3.jpg" alt="Eventos Especiales" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Celebraciones</div>
+                    <h3 class="product-title">Eventos Especiales</h3>
+                    <p class="product-description">
+                        Paquetes personalizados para ocasiones inolvidables.
+                    </p>
+                    <div class="product-price">$120.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card fade-in" data-product='{"id":4,"name":"Chocolates Artesanales","price":35000,"image":"../img/ImgProvicional.jpg","category":"Delicias Dulces"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional.jpg" alt="Chocolates Artesanales" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Delicias Dulces</div>
+                    <h3 class="product-title">Chocolates Artesanales</h3>
+                    <p class="product-description">
+                        Chocolates premium y postres gourmet.
+                    </p>
+                    <div class="product-price">$35.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product-card fade-in" data-product='{"id":5,"name":"Combos Personalizados","price":85000,"image":"../img/ImgProvicional2.jpg","category":"Sorpresas Únicas"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional2.jpg" alt="Combos Personalizados" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Sorpresas Únicas</div>
+                    <h3 class="product-title">Combos Personalizados</h3>
+                    <p class="product-description">
+                        Combinaciones únicas de regalos y delicias.
+                    </p>
+                    <div class="product-price">$85.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product-card fade-in" data-product='{"id":6,"name":"Arreglos Florales","price":55000,"image":"../img/ImgProvicional3.jpg","category":"Amor Eterno"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional3.jpg" alt="Arreglos Florales" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Amor Eterno</div>
+                    <h3 class="product-title">Arreglos Florales</h3>
+                    <p class="product-description">
+                        Flores frescas y arreglos exclusivos.
+                    </p>
+                    <div class="product-price">$55.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <!-- Productos adicionales -->
+            <div class="product-card fade-in" data-product='{"id":7,"name":"Cesta Gourmet","price":95000,"image":"../img/ImgProvicional.jpg","category":"Premium"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional.jpg" alt="Cesta Gourmet" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Premium</div>
+                    <h3 class="product-title">Cesta Gourmet</h3>
+                    <p class="product-description">
+                        Selección completa de productos delicatesen.
+                    </p>
+                    <div class="product-price">$95.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-in" data-product='{"id":8,"name":"Desayuno Sorpresa","price":75000,"image":"../img/ImgProvicional2.jpg","category":"Sorpresas"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional2.jpg" alt="Desayuno Sorpresa" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Sorpresas</div>
+                    <h3 class="product-title">Desayuno Sorpresa</h3>
+                    <p class="product-description">
+                        Desayuno completo entregado a domicilio.
+                    </p>
+                    <div class="product-price">$75.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-in" data-product='{"id":9,"name":"Picnic Romántico","price":105000,"image":"../img/ImgProvicional3.jpg","category":"Experiencias"}'>
+                <div class="product-image">
+                    <img src="../img/ImgProvicional3.jpg" alt="Picnic Romántico" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Experiencias</div>
+                    <h3 class="product-title">Picnic Romántico</h3>
+                    <p class="product-description">
+                        Todo lo necesario para un picnic perfecto.
+                    </p>
+                    <div class="product-price">$105.000</div>
+                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../img/logo.png" alt="Creations By Mariols" class="footer-logo">
+                <p>
+                    Creando momentos inolvidables desde el corazón.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Productos</h4>
+                <ul class="footer-links">
+                    <li><a href="catalogo.html">Ver Catálogo</a></li>
+                    <li><a href="../index.html#productos">Especialidades</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Información</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="consejos.html">Consejos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="#">📍 Cúcuta, Colombia</a></li>
+                    <li><a href="#">📱 +57 300 123 4567</a></li>
+                    <li><a href="#">📧 info@creationsbymariols.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Creations By Mariols. Todos los derechos reservados. Hecho con amor 💝</p>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

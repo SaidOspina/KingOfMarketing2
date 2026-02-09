@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Creations By Mariols</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Creations By Mariols" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="consejos.html">Consejos</a></li>
+                <li>
+                    <a href="#" class="cta-nav cart-toggle" id="cartToggle">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>🛒 Mi Carrito</h2>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="empty-icon">🎁</div>
+                <p>Tu carrito está vacío</p>
+                <p class="empty-subtitle">¡Agrega productos para comenzar!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0</span>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+            <button class="btn-clear-cart" id="clearCart">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Gallery Hero -->
+    <section class="hero" style="min-height: 60vh; padding-top: 10rem;">
+        <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="hero-subtitle">✦ Portfolio de Creaciones</div>
+            <h1 style="text-align: center;">
+                Nuestra
+                <span class="highlight">Galería</span>
+            </h1>
+            <p class="hero-description" style="text-align: center;">
+                Explora nuestras creaciones más especiales y déjate inspirar
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" style="padding: 4rem 5%;">
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional.jpg" alt="Creación 1">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional2.jpg" alt="Creación 2">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional3.jpg" alt="Creación 3">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional.jpg" alt="Creación 4">
+            </div>
+            <div class="gallery-item fade-in large">
+                <img src="../img/ImgProvicional2.jpg" alt="Creación 5">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional3.jpg" alt="Creación 6">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional.jpg" alt="Creación 7">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional2.jpg" alt="Creación 8">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional3.jpg" alt="Creación 9">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional.jpg" alt="Creación 10">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional2.jpg" alt="Creación 11">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../img/ImgProvicional3.jpg" alt="Creación 12">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Te Gustó lo que Viste?</h2>
+            <p>
+                Cada creación puede ser personalizada según tus preferencias. 
+                Contáctanos y hagamos realidad tu visión.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/573001234567" class="btn-white">Consultar por WhatsApp</a>
+                <a href="catalogo.html" class="btn-outline">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../img/logo.png" alt="Creations By Mariols" class="footer-logo">
+                <p>
+                    Creando momentos inolvidables desde el corazón.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Productos</h4>
+                <ul class="footer-links">
+                    <li><a href="catalogo.html">Ver Catálogo</a></li>
+                    <li><a href="../index.html#productos">Especialidades</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Información</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="consejos.html">Consejos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="#">📍 Cúcuta, Colombia</a></li>
+                    <li><a href="#">📱 +57 300 123 4567</a></li>
+                    <li><a href="#">📧 info@creationsbymariols.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Creations By Mariols. Todos los derechos reservados. Hecho con amor 💝</p>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>
