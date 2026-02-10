@@ -301,3 +301,10 @@ document.addEventListener('mousemove', (e) => {
         setTimeout(() => trail.remove(), 1000);
     }
 });
+
+const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
