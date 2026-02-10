@@ -9,68 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
-    <style>
-        .tips-section {
-            padding: 8rem 5% 4rem;
-            background: var(--cream);
-        }
-        
-        .tips-grid {
-            max-width: 1200px;
-            margin: 4rem auto 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-        }
-        
-        .tip-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 25px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-        }
-        
-        .tip-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hard);
-        }
-        
-        .tip-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .tip-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--rose-deep);
-            margin-bottom: 1rem;
-        }
-        
-        .tip-content {
-            color: #666;
-            font-size: 1.15rem;
-            line-height: 1.8;
-        }
-        
-        .tip-content ul {
-            margin-top: 1rem;
-            padding-left: 1.5rem;
-        }
-        
-        .tip-content li {
-            margin-bottom: 0.8rem;
-        }
-        
-        @media (max-width: 768px) {
-            .tips-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -123,145 +61,313 @@
     <!-- Tips Hero -->
     <section class="hero" style="min-height: 60vh; padding-top: 10rem;">
         <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <div class="hero-subtitle">✦ Guía Experta</div>
+            <div class="hero-subtitle">✦ Centro de Conocimiento</div>
             <h1 style="text-align: center;">
-                Consejos para
-                <span class="highlight">Regalar</span>
+                Comunidad de
+                <span class="highlight">Consejos</span>
             </h1>
             <p class="hero-description" style="text-align: center;">
-                Tips profesionales para crear el regalo perfecto y causar una impresión inolvidable
+                Aprende, comparte y descubre los mejores tips para crear sorpresas inolvidables
             </p>
         </div>
     </section>
 
-    <!-- Tips Section -->
-    <section class="tips-section">
-        <div class="tips-grid">
-            <!-- Consejo 1 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">💝</div>
-                <h3 class="tip-title">Personalización es Clave</h3>
-                <div class="tip-content">
-                    <p>Un regalo personalizado demuestra que pensaste en la persona:</p>
-                    <ul>
-                        <li>Incluye sus colores favoritos</li>
-                        <li>Agrega productos que le encanten</li>
-                        <li>Personaliza con mensajes especiales</li>
-                        <li>Considera sus gustos y preferencias</li>
-                    </ul>
-                </div>
+    <!-- Forum Categories -->
+    <section class="tips-forum">
+        <div class="forum-container">
+            <div class="section-header fade-in" style="margin-bottom: 3rem;">
+                <div class="section-label">Explora por Categoría</div>
+                <h2 class="section-title">Temas Populares</h2>
             </div>
 
-            <!-- Consejo 2 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">🧀</div>
-                <h3 class="tip-title">Arma tu Tabla Perfecta</h3>
-                <div class="tip-content">
-                    <p>Para una tabla de charcutería memorable:</p>
-                    <ul>
-                        <li>Combina 3-4 tipos de quesos diferentes</li>
-                        <li>Incluye embutidos variados</li>
-                        <li>Agrega frutas frescas y secas</li>
-                        <li>No olvides crackers y frutos secos</li>
-                        <li>Presenta con atención al detalle</li>
-                    </ul>
+            <div class="forum-categories">
+                <div class="category-card fade-in">
+                    <div class="category-icon">💝</div>
+                    <h3 class="category-title">Sorpresas Románticas</h3>
+                    <p class="category-count">12 publicaciones</p>
+                    <p class="category-description">
+                        Ideas creativas para enamorar y sorprender a tu pareja
+                    </p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon">🧀</div>
+                    <h3 class="category-title">Charcutería Perfecta</h3>
+                    <p class="category-count">8 publicaciones</p>
+                    <p class="category-description">
+                        Aprende a armar y presentar tablas gourmet profesionales
+                    </p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon">🎉</div>
+                    <h3 class="category-title">Organización de Eventos</h3>
+                    <p class="category-count">15 publicaciones</p>
+                    <p class="category-description">
+                        Tips para planificar celebraciones inolvidables
+                    </p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon">🎨</div>
+                    <h3 class="category-title">Decoración & Presentación</h3>
+                    <p class="category-count">10 publicaciones</p>
+                    <p class="category-description">
+                        Técnicas para hacer que tus regalos luzcan espectaculares
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Consejo 3 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">🎁</div>
-                <h3 class="tip-title">Momentos Ideales</h3>
-                <div class="tip-content">
-                    <p>Los mejores momentos para sorprender:</p>
-                    <ul>
-                        <li>Aniversarios y cumpleaños</li>
-                        <li>San Valentín y Día de la Madre</li>
-                        <li>Logros y celebraciones especiales</li>
-                        <li>Sorpresas "sin razón" (las mejores)</li>
-                        <li>Pedidas de mano y propuestas</li>
-                    </ul>
-                </div>
+    <!-- Forum Posts -->
+    <section class="tips-forum" style="padding-top: 2rem;">
+        <div class="forum-container">
+            <div class="section-header fade-in" style="margin-bottom: 3rem;">
+                <div class="section-label">Publicaciones Recientes</div>
+                <h2 class="section-title">Consejos de la Comunidad</h2>
             </div>
 
-            <!-- Consejo 4 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">🌹</div>
-                <h3 class="tip-title">Cuidado de Flores</h3>
-                <div class="tip-content">
-                    <p>Mantén tus flores frescas por más tiempo:</p>
-                    <ul>
-                        <li>Corta los tallos en diagonal</li>
-                        <li>Cambia el agua cada 2 días</li>
-                        <li>Evita luz solar directa</li>
-                        <li>Retira hojas bajo el agua</li>
-                        <li>Usa agua fresca y limpia</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="forum-posts">
+                <!-- Post 1: Video Tutorial -->
+                <article class="forum-post fade-in">
+                    <div class="post-header">
+                        <div class="post-avatar">🎬</div>
+                        <div class="post-meta">
+                            <h3>Cómo Armar una Tabla de Quesos Profesional</h3>
+                            <p class="post-info">
+                                Por <strong>Mariols</strong> • Hace 2 días
+                                <span class="post-category-tag">Charcutería</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">
+                            En este tutorial paso a paso te enseño cómo seleccionar, combinar y presentar quesos 
+                            de manera profesional. Aprenderás sobre texturas, sabores y la presentación perfecta 
+                            para impresionar a tus invitados.
+                        </p>
+                        <div class="post-media">
+                            <div style="position: relative; padding-bottom: 56.25%; background: #000; border-radius: 15px;">
+                                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                                    ▶️
+                                </div>
+                                <p style="position: absolute; bottom: 20px; left: 20px; color: white; margin: 0;">
+                                    Video: Tutorial Tabla de Quesos (12:45)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-tips-list">
+                            <h4>Puntos Clave del Video:</h4>
+                            <ul>
+                                <li>Selecciona 3-5 tipos de quesos con diferentes texturas</li>
+                                <li>Incluye uno suave, uno semi-duro y uno duro</li>
+                                <li>Agrega frutas frescas y secas para contraste</li>
+                                <li>Los frutos secos aportan textura crujiente</li>
+                                <li>Presenta en diagonal para mejor visual</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span class="post-action">👍 245 Me gusta</span>
+                        <span class="post-action">💬 18 Comentarios</span>
+                        <span class="post-action">🔖 Guardar</span>
+                    </div>
+                </article>
 
-            <!-- Consejo 5 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">🎀</div>
-                <h3 class="tip-title">Presentación Impecable</h3>
-                <div class="tip-content">
-                    <p>La presentación hace la diferencia:</p>
-                    <ul>
-                        <li>Usa cajas elegantes y de calidad</li>
-                        <li>Papel de seda para proteger</li>
-                        <li>Cintas y moños llamativos</li>
-                        <li>Tarjetas con mensajes personales</li>
-                        <li>Detalles que sorprendan al abrir</li>
-                    </ul>
-                </div>
-            </div>
+                <!-- Post 2: Image Gallery Post -->
+                <article class="forum-post fade-in">
+                    <div class="post-header">
+                        <div class="post-avatar">📸</div>
+                        <div class="post-meta">
+                            <h3>10 Ideas de Presentación para Cajas de Regalo</h3>
+                            <p class="post-info">
+                                Por <strong>Mariols</strong> • Hace 5 días
+                                <span class="post-category-tag">Decoración</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">
+                            La presentación es tan importante como el contenido. Aquí te muestro 10 formas 
+                            creativas de presentar tus cajas de regalo para causar un impacto memorable desde 
+                            el primer momento.
+                        </p>
+                        <div class="post-media">
+                            <img src="../img/ImgProvicional.jpg" alt="Ideas de presentación" class="post-image">
+                        </div>
+                        <div class="post-tips-list">
+                            <h4>Elementos Esenciales:</h4>
+                            <ul>
+                                <li>Papel de seda de colores coordinados</li>
+                                <li>Cintas de satén o yute según el estilo</li>
+                                <li>Flores frescas o secas como detalle</li>
+                                <li>Tarjetas personalizadas escritas a mano</li>
+                                <li>Washi tape para cerrar con estilo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span class="post-action">👍 198 Me gusta</span>
+                        <span class="post-action">💬 32 Comentarios</span>
+                        <span class="post-action">🔖 Guardar</span>
+                    </div>
+                </article>
 
-            <!-- Consejo 6 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">📅</div>
-                <h3 class="tip-title">Planifica con Tiempo</h3>
-                <div class="tip-content">
-                    <p>Para mejores resultados:</p>
-                    <ul>
-                        <li>Ordena con 3-5 días de anticipación</li>
-                        <li>Para fechas especiales, reserva antes</li>
-                        <li>Comunica cualquier alergia o preferencia</li>
-                        <li>Confirma dirección y horario de entrega</li>
-                        <li>Ten un plan B para sorpresas</li>
-                    </ul>
-                </div>
-            </div>
+                <!-- Post 3: Planning Tips -->
+                <article class="forum-post fade-in">
+                    <div class="post-header">
+                        <div class="post-avatar">📋</div>
+                        <div class="post-meta">
+                            <h3>Guía Completa: Planifica tu Evento Especial</h3>
+                            <p class="post-info">
+                                Por <strong>Mariols</strong> • Hace 1 semana
+                                <span class="post-category-tag">Eventos</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">
+                            Planificar un evento puede ser estresante, pero con la organización correcta, 
+                            todo fluye perfectamente. Aquí está mi checklist probada para eventos exitosos.
+                        </p>
+                        <div class="post-tips-list">
+                            <h4>Timeline de Planificación:</h4>
+                            <ul>
+                                <li><strong>1 mes antes:</strong> Define presupuesto y lista de invitados</li>
+                                <li><strong>3 semanas antes:</strong> Reserva lugar y contrata servicios</li>
+                                <li><strong>2 semanas antes:</strong> Envía invitaciones y confirma menú</li>
+                                <li><strong>1 semana antes:</strong> Confirma todos los detalles</li>
+                                <li><strong>1 día antes:</strong> Prepara decoración y última revisión</li>
+                                <li><strong>Día del evento:</strong> Llega temprano y disfruta</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span class="post-action">👍 312 Me gusta</span>
+                        <span class="post-action">💬 56 Comentarios</span>
+                        <span class="post-action">🔖 Guardar</span>
+                    </div>
+                </article>
 
-            <!-- Consejo 7 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">💬</div>
-                <h3 class="tip-title">Mensaje Perfecto</h3>
-                <div class="tip-content">
-                    <p>Escribe mensajes que emocionen:</p>
-                    <ul>
-                        <li>Sé auténtico y personal</li>
-                        <li>Expresa tus verdaderos sentimientos</li>
-                        <li>Menciona recuerdos especiales</li>
-                        <li>Evita mensajes genéricos</li>
-                        <li>Escribe desde el corazón</li>
-                    </ul>
-                </div>
-            </div>
+                <!-- Post 4: Video - Surprise Ideas -->
+                <article class="forum-post fade-in">
+                    <div class="post-header">
+                        <div class="post-avatar">🎬</div>
+                        <div class="post-meta">
+                            <h3>5 Sorpresas Románticas que Nunca Fallan</h3>
+                            <p class="post-info">
+                                Por <strong>Mariols</strong> • Hace 1 semana
+                                <span class="post-category-tag">Sorpresas</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">
+                            ¿Quieres enamorar pero no sabes cómo? En este video te comparto 5 ideas de sorpresas 
+                            románticas que han emocionado a cientos de parejas. ¡Prepárate para ver lágrimas de felicidad!
+                        </p>
+                        <div class="post-media">
+                            <div style="position: relative; padding-bottom: 56.25%; background: #000; border-radius: 15px;">
+                                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                                    ▶️
+                                </div>
+                                <p style="position: absolute; bottom: 20px; left: 20px; color: white; margin: 0;">
+                                    Video: Sorpresas Románticas (8:32)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-tips-list">
+                            <h4>Las 5 Sorpresas:</h4>
+                            <ul>
+                                <li>Desayuno en cama con flores y carta personalizada</li>
+                                <li>Trail de fotos con recuerdos especiales</li>
+                                <li>Cena sorpresa en casa decorada temáticamente</li>
+                                <li>Caja de "razones por las que te amo"</li>
+                                <li>Picnic nocturno bajo las estrellas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span class="post-action">👍 567 Me gusta</span>
+                        <span class="post-action">💬 89 Comentarios</span>
+                        <span class="post-action">🔖 Guardar</span>
+                    </div>
+                </article>
 
-            <!-- Consejo 8 -->
-            <div class="tip-card fade-in">
-                <div class="tip-icon">🍫</div>
-                <h3 class="tip-title">Conservación de Chocolates</h3>
-                <div class="tip-content">
-                    <p>Mantén los chocolates en perfecto estado:</p>
-                    <ul>
-                        <li>Almacena en lugar fresco y seco</li>
-                        <li>Evita refrigeración directa</li>
-                        <li>Temperatura ideal: 15-18°C</li>
-                        <li>Protege de olores fuertes</li>
-                        <li>Consume dentro de la fecha indicada</li>
-                    </ul>
-                </div>
+                <!-- Post 5: Seasonal Tips -->
+                <article class="forum-post fade-in">
+                    <div class="post-header">
+                        <div class="post-avatar">🌸</div>
+                        <div class="post-meta">
+                            <h3>Flores de Temporada: Qué Elegir Cada Mes</h3>
+                            <p class="post-info">
+                                Por <strong>Mariols</strong> • Hace 2 semanas
+                                <span class="post-category-tag">Decoración</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">
+                            Elegir flores de temporada no solo es más económico, sino que garantiza frescura 
+                            y belleza. Aquí está mi guía mensual para seleccionar las mejores flores.
+                        </p>
+                        <div class="post-media">
+                            <img src="../img/ImgProvicional2.jpg" alt="Flores de temporada" class="post-image">
+                        </div>
+                        <div class="post-tips-list">
+                            <h4>Calendario Floral:</h4>
+                            <ul>
+                                <li><strong>Primavera:</strong> Tulipanes, peonías, lilas</li>
+                                <li><strong>Verano:</strong> Girasoles, hortensias, lavanda</li>
+                                <li><strong>Otoño:</strong> Dalias, crisantemos, rosas</li>
+                                <li><strong>Invierno:</strong> Amarilis, poinsettias, eucalipto</li>
+                                <li><strong>Todo el año:</strong> Rosas, claveles, alstroemerias</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span class="post-action">👍 423 Me gusta</span>
+                        <span class="post-action">💬 67 Comentarios</span>
+                        <span class="post-action">🔖 Guardar</span>
+                    </div>
+                </article>
+
+                <!-- Post 6: Budget Tips -->
+                <article class="forum-post fade-in">
+                    <div class="post-header">
+                        <div class="post-avatar">💰</div>
+                        <div class="post-meta">
+                            <h3>Regalos Increíbles con Presupuesto Limitado</h3>
+                            <p class="post-info">
+                                Por <strong>Mariols</strong> • Hace 3 semanas
+                                <span class="post-category-tag">Sorpresas</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">
+                            No necesitas gastar una fortuna para crear un regalo memorable. Lo que realmente 
+                            importa es el pensamiento y el esfuerzo que pongas en personalizar tu sorpresa.
+                        </p>
+                        <div class="post-tips-list">
+                            <h4>Ideas Económicas pero Impactantes:</h4>
+                            <ul>
+                                <li>Crea un álbum de fotos digital personalizado</li>
+                                <li>Arma una caja con sus snacks favoritos</li>
+                                <li>Escribe 52 cartas (una para cada semana del año)</li>
+                                <li>Prepara un playlist personalizado con canciones especiales</li>
+                                <li>Organiza una cacería del tesoro casera</li>
+                                <li>Haz cupones personalizados de experiencias juntos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span class="post-action">👍 891 Me gusta</span>
+                        <span class="post-action">💬 134 Comentarios</span>
+                        <span class="post-action">🔖 Guardar</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -269,14 +375,14 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>¿Listo para el Regalo Perfecto?</h2>
+            <h2>¿Tienes Alguna Pregunta?</h2>
             <p>
-                Con estos consejos y nuestros productos premium, 
-                tu regalo será absolutamente inolvidable.
+                Estamos aquí para ayudarte a crear la sorpresa perfecta. 
+                Contáctanos y recibe asesoría personalizada.
             </p>
             <div class="cta-buttons">
-                <a href="catalogo.html" class="btn-white">Ver Catálogo</a>
-                <a href="https://wa.me/573001234567" class="btn-outline">Consultar</a>
+                <a href="https://wa.me/573001234567" class="btn-white">Consultar por WhatsApp</a>
+                <a href="catalogo.html" class="btn-outline">Ver Catálogo</a>
             </div>
         </div>
     </section>

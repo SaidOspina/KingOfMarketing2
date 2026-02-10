@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
 </head>
 <body>
     <!-- Header -->
@@ -72,150 +72,50 @@
         </div>
     </section>
 
-    <!-- Full Products Section -->
+    <!-- Catalog Controls -->
     <section class="products" style="padding: 4rem 5%;">
-        <div class="products-grid">
-            <!-- Producto 1 -->
-            <div class="product-card fade-in" data-product='{"id":1,"name":"Cajas de Amor","price":45000,"image":"../img/ImgProvicional.jpg","category":"Regalos Románticos"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional.jpg" alt="Cajas de Amor" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Regalos Románticos</div>
-                    <h3 class="product-title">Cajas de Amor</h3>
-                    <p class="product-description">
-                        Sorpresas personalizadas con flores, chocolates y detalles únicos.
-                    </p>
-                    <div class="product-price">$45.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
+        <div class="catalog-controls">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="🔍 Buscar productos por nombre..."
+                >
             </div>
 
-            <!-- Producto 2 -->
-            <div class="product-card fade-in" data-product='{"id":2,"name":"Tablas Gourmet","price":65000,"image":"../img/ImgProvicional2.jpg","category":"Charcutería Premium"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional2.jpg" alt="Tablas Gourmet" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Charcutería Premium</div>
-                    <h3 class="product-title">Tablas Gourmet</h3>
-                    <p class="product-description">
-                        Selección exquisita de quesos artesanales y embutidos premium.
-                    </p>
-                    <div class="product-price">$65.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="todos">
+                    ✨ Todos los Productos
+                </button>
+                <button class="filter-btn" data-category="sorpresas">
+                    💝 Sorpresas Románticas
+                </button>
+                <button class="filter-btn" data-category="charcuteria">
+                    🧀 Charcutería & Tablas
+                </button>
+                <button class="filter-btn" data-category="eventos">
+                    🎉 Eventos & Celebraciones
+                </button>
+                <button class="filter-btn" data-category="dulces">
+                    🍫 Chocolates & Dulces
+                </button>
+                <button class="filter-btn" data-category="flores">
+                    🌹 Arreglos Florales
+                </button>
             </div>
 
-            <!-- Producto 3 -->
-            <div class="product-card fade-in" data-product='{"id":3,"name":"Eventos Especiales","price":120000,"image":"../img/ImgProvicional3.jpg","category":"Celebraciones"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional3.jpg" alt="Eventos Especiales" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Celebraciones</div>
-                    <h3 class="product-title">Eventos Especiales</h3>
-                    <p class="product-description">
-                        Paquetes personalizados para ocasiones inolvidables.
-                    </p>
-                    <div class="product-price">$120.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
+            <!-- Results Count -->
+            <div class="results-count" id="resultsCount">
+                Mostrando <strong>50</strong> productos
             </div>
+        </div>
 
-            <!-- Producto 4 -->
-            <div class="product-card fade-in" data-product='{"id":4,"name":"Chocolates Artesanales","price":35000,"image":"../img/ImgProvicional.jpg","category":"Delicias Dulces"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional.jpg" alt="Chocolates Artesanales" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Delicias Dulces</div>
-                    <h3 class="product-title">Chocolates Artesanales</h3>
-                    <p class="product-description">
-                        Chocolates premium y postres gourmet.
-                    </p>
-                    <div class="product-price">$35.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
-            </div>
-
-            <!-- Producto 5 -->
-            <div class="product-card fade-in" data-product='{"id":5,"name":"Combos Personalizados","price":85000,"image":"../img/ImgProvicional2.jpg","category":"Sorpresas Únicas"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional2.jpg" alt="Combos Personalizados" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Sorpresas Únicas</div>
-                    <h3 class="product-title">Combos Personalizados</h3>
-                    <p class="product-description">
-                        Combinaciones únicas de regalos y delicias.
-                    </p>
-                    <div class="product-price">$85.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
-            </div>
-
-            <!-- Producto 6 -->
-            <div class="product-card fade-in" data-product='{"id":6,"name":"Arreglos Florales","price":55000,"image":"../img/ImgProvicional3.jpg","category":"Amor Eterno"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional3.jpg" alt="Arreglos Florales" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Amor Eterno</div>
-                    <h3 class="product-title">Arreglos Florales</h3>
-                    <p class="product-description">
-                        Flores frescas y arreglos exclusivos.
-                    </p>
-                    <div class="product-price">$55.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
-            </div>
-
-            <!-- Productos adicionales -->
-            <div class="product-card fade-in" data-product='{"id":7,"name":"Cesta Gourmet","price":95000,"image":"../img/ImgProvicional.jpg","category":"Premium"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional.jpg" alt="Cesta Gourmet" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Premium</div>
-                    <h3 class="product-title">Cesta Gourmet</h3>
-                    <p class="product-description">
-                        Selección completa de productos delicatesen.
-                    </p>
-                    <div class="product-price">$95.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
-            </div>
-
-            <div class="product-card fade-in" data-product='{"id":8,"name":"Desayuno Sorpresa","price":75000,"image":"../img/ImgProvicional2.jpg","category":"Sorpresas"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional2.jpg" alt="Desayuno Sorpresa" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Sorpresas</div>
-                    <h3 class="product-title">Desayuno Sorpresa</h3>
-                    <p class="product-description">
-                        Desayuno completo entregado a domicilio.
-                    </p>
-                    <div class="product-price">$75.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
-            </div>
-
-            <div class="product-card fade-in" data-product='{"id":9,"name":"Picnic Romántico","price":105000,"image":"../img/ImgProvicional3.jpg","category":"Experiencias"}'>
-                <div class="product-image">
-                    <img src="../img/ImgProvicional3.jpg" alt="Picnic Romántico" class="product-img">
-                </div>
-                <div class="product-content">
-                    <div class="product-category">Experiencias</div>
-                    <h3 class="product-title">Picnic Romántico</h3>
-                    <p class="product-description">
-                        Todo lo necesario para un picnic perfecto.
-                    </p>
-                    <div class="product-price">$105.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
-                </div>
-            </div>
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically loaded here -->
         </div>
     </section>
 
@@ -265,6 +165,9 @@
             <p>&copy; 2026 Creations By Mariols. Todos los derechos reservados. Hecho con amor 💝</p>
         </div>
     </footer>
+
+    <script src="../js/catalog-products.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/catalog.js"></script>
 </body>
 </html>
