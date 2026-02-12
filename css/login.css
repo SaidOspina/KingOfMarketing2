@@ -1,0 +1,308 @@
+:root {
+    --rose-primary: #d4557a;
+    --rose-deep: #a83655;
+    --rose-light: #f4d1dc;
+    --rose-pale: #fef5f8;
+    --cream: #fdfbf7;
+    --charcoal: #2c2c2c;
+    --gold: #d4af37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+}
+
+/* ============ LOGIN SCREEN ============ */
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--rose-deep) 0%, var(--rose-primary) 50%, var(--gold) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="150" fill="rgba(255,255,255,0.05)"/><circle cx="800" cy="800" r="200" fill="rgba(255,255,255,0.05)"/><circle cx="500" cy="500" r="100" fill="rgba(255,255,255,0.08)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, -30px) rotate(120deg); }
+    66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: min(450px, 90vw);
+}
+
+.login-decoration {
+    position: absolute;
+    inset: -100px;
+    pointer-events: none;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatHeart 4s ease-in-out infinite;
+}
+
+.floating-heart:nth-child(1) {
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.floating-heart:nth-child(2) {
+    top: 60%;
+    right: -10%;
+    animation-delay: 1.3s;
+}
+
+.floating-heart:nth-child(3) {
+    bottom: 20%;
+    left: 10%;
+    animation-delay: 2.6s;
+}
+
+@keyframes floatHeart {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-30px) scale(1.2); opacity: 1; }
+}
+
+.login-card {
+    background: white;
+    border-radius: 30px;
+    padding: clamp(2rem, 5vw, 3rem);
+    box-shadow: 0 30px 80px rgba(168, 54, 85, 0.25);
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+}
+
+.login-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--rose-deep);
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 1rem;
+}
+
+.form-group input {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--rose-pale);
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--cream);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--rose-primary);
+    background: white;
+    box-shadow: 0 5px 20px rgba(212, 85, 122, 0.15);
+}
+
+.btn-login {
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose-primary));
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(168, 54, 85, 0.3);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.login-icon {
+    font-size: 1.3rem;
+}
+
+.login-hint {
+    text-align: center;
+    padding: 1rem;
+    background: var(--rose-pale);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--rose-deep);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: var(--rose-pale);
+    transform: translateX(-3px);
+}
+
+/* ============ NOTIFICATIONS ============ */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 10000;
+    font-weight: 600;
+    animation: slideInRight 0.4s ease;
+    max-width: 90vw;
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .login-logo {
+        width: 80px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .login-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .form-group input {
+        padding: 0.9rem 1.2rem;
+    }
+
+    .btn-login {
+        padding: 1rem;
+    }
+
+    .login-hint {
+        font-size: 0.8rem;
+    }
+
+    .floating-heart {
+        font-size: 1.5rem;
+    }
+}
