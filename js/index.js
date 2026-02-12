@@ -12,25 +12,37 @@ class ShoppingCart {
 
     attachEventListeners() {
         // Toggle cart
-        document.getElementById('cartToggle').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.toggleCart();
-        });
+        const cartToggle = document.getElementById('cartToggle');
+        if (cartToggle) {
+            cartToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.toggleCart();
+            });
+        }
 
-        document.getElementById('cartClose').addEventListener('click', () => {
-            this.closeCart();
-        });
+        const cartClose = document.getElementById('cartClose');
+        if (cartClose) {
+            cartClose.addEventListener('click', () => {
+                this.closeCart();
+            });
+        }
 
-        document.getElementById('cartOverlay').addEventListener('click', () => {
-            this.closeCart();
-        });
+        const cartOverlay = document.getElementById('cartOverlay');
+        if (cartOverlay) {
+            cartOverlay.addEventListener('click', () => {
+                this.closeCart();
+            });
+        }
 
         // Clear cart
-        document.getElementById('clearCart').addEventListener('click', () => {
-            if (confirm('¿Estás seguro de vaciar el carrito?')) {
-                this.clearCart();
-            }
-        });
+        const clearCart = document.getElementById('clearCart');
+        if (clearCart) {
+            clearCart.addEventListener('click', () => {
+                if (confirm('¿Estás seguro de vaciar el carrito?')) {
+                    this.clearCart();
+                }
+            });
+        }
 
         // Add to cart buttons
         document.querySelectorAll('.btn-add-cart').forEach(btn => {
@@ -110,6 +122,8 @@ class ShoppingCart {
         const cartItems = document.getElementById('cartItems');
         const totalPrice = document.getElementById('totalPrice');
 
+        if (!cartCount || !cartItems || !totalPrice) return;
+
         // Update count
         const totalItems = this.items.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalItems;
@@ -165,37 +179,134 @@ document.addEventListener('DOMContentLoaded', () => {
     cart = new ShoppingCart();
 });
 
-// ============ ORIGINAL FUNCTIONALITY ============
+// ============ MENU HAMBURGUESA ============
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-// Loader
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar menú al hacer click fuera
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove("active");
+            }
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove("active");
+            });
+        });
+    }
+});
+
+// ============ HERO IMAGE CAROUSEL ============
+class HeroCarousel {
+    constructor() {
+        this.images = [
+            'img/logo.png',
+            'img/ImgProvicional.jpg',
+            'img/ImgProvicional2.jpg'
+        ];
+        this.currentIndex = 0;
+        this.heroImage = document.querySelector('.hero-image');
+        this.interval = null;
+        
+        if (this.heroImage) {
+            this.init();
+        }
+    }
+
+    init() {
+        // Agregar transición suave a la imagen
+        this.heroImage.style.transition = 'opacity 0.5s ease-in-out';
+        
+        // Iniciar el carrusel automático
+        this.startCarousel();
+        
+        // Pausar en hover
+        const container = document.querySelector('.hero-image-container');
+        if (container) {
+            container.addEventListener('mouseenter', () => this.stopCarousel());
+            container.addEventListener('mouseleave', () => this.startCarousel());
+        }
+    }
+
+    startCarousel() {
+        this.interval = setInterval(() => {
+            this.nextImage();
+        }, 4000); // Cambia cada 4 segundos
+    }
+
+    stopCarousel() {
+        if (this.interval) {
+            clearInterval(this.interval);
+        }
+    }
+
+    nextImage() {
+        // Fade out
+        this.heroImage.style.opacity = '0';
+        
+        setTimeout(() => {
+            // Cambiar imagen
+            this.currentIndex = (this.currentIndex + 1) % this.images.length;
+            this.heroImage.src = this.images[this.currentIndex];
+            
+            // Fade in
+            this.heroImage.style.opacity = '1';
+        }, 500);
+    }
+}
+
+// Inicializar carrusel solo en index.html
+document.addEventListener('DOMContentLoaded', () => {
+    const heroImage = document.querySelector('.hero-image');
+    if (heroImage) {
+        new HeroCarousel();
+    }
+});
+
+// ============ LOADER ============
 setTimeout(() => {
-    document.querySelector('.loader').style.display = 'none';
+    const loader = document.querySelector('.loader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
 }, 3000);
 
-// Floating particles
+// ============ FLOATING PARTICLES ============
 const floatingContainer = document.getElementById('floatingElements');
-const particles = ['❤️', '💕', '💖', '💗', '💝', '🌹', '🎀', '✨'];
+if (floatingContainer) {
+    const particles = ['❤️', '💕', '💖', '💗', '💝', '🌹', '🎀', '✨'];
 
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('float-particle');
-    particle.textContent = particles[Math.floor(Math.random() * particles.length)];
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.fontSize = (Math.random() * 20 + 15) + 'px';
-    particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-    particle.style.animationDelay = Math.random() * 5 + 's';
-    
-    floatingContainer.appendChild(particle);
-    
-    setTimeout(() => particle.remove(), 25000);
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.classList.add('float-particle');
+        particle.textContent = particles[Math.floor(Math.random() * particles.length)];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.fontSize = (Math.random() * 20 + 15) + 'px';
+        particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        
+        floatingContainer.appendChild(particle);
+        
+        setTimeout(() => particle.remove(), 25000);
+    }
+
+    setInterval(createParticle, 3000);
+    for(let i = 0; i < 10; i++) {
+        setTimeout(createParticle, i * 300);
+    }
 }
 
-setInterval(createParticle, 3000);
-for(let i = 0; i < 10; i++) {
-    setTimeout(createParticle, i * 300);
-}
-
-// Header scroll effect
+// ============ HEADER SCROLL EFFECT ============
 const header = document.getElementById('header');
 let lastScroll = 0;
 
@@ -211,7 +322,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Smooth scroll
+// ============ SMOOTH SCROLL ============
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -228,7 +339,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for animations
+// ============ INTERSECTION OBSERVER FOR ANIMATIONS ============
 const observerOptions = {
     threshold: 0.15,
     rootMargin: '0px 0px -100px 0px'
@@ -246,7 +357,7 @@ document.querySelectorAll('.fade-in').forEach(element => {
     observer.observe(element);
 });
 
-// Parallax effect for hero
+// ============ PARALLAX EFFECT FOR HERO ============
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroImage = document.querySelector('.hero-image');
@@ -255,12 +366,12 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add stagger delay to product cards
+// ============ STAGGER DELAY FOR PRODUCT CARDS ============
 document.querySelectorAll('.product-card').forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.1}s`;
 });
 
-// Random rotation for gallery items on hover
+// ============ RANDOM ROTATION FOR GALLERY ITEMS ============
 document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('mouseenter', function() {
         const rotation = (Math.random() - 0.5) * 10;
@@ -272,11 +383,11 @@ document.querySelectorAll('.gallery-item').forEach(item => {
     });
 });
 
-// Cursor trail effect (optional enhancement)
+// ============ CURSOR TRAIL EFFECT ============
 let lastTrailTime = 0;
 document.addEventListener('mousemove', (e) => {
     const now = Date.now();
-    if (now - lastTrailTime < 100) return; // Throttle trail creation
+    if (now - lastTrailTime < 100) return;
     lastTrailTime = now;
     
     if (Math.random() > 0.95) {
@@ -301,10 +412,3 @@ document.addEventListener('mousemove', (e) => {
         setTimeout(() => trail.remove(), 1000);
     }
 });
-
-const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });

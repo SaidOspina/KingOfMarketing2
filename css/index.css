@@ -1483,6 +1483,7 @@ footer {
 
 .logo-img {
     height: 50px;
+    z-index: 1001;
 }
 
 /* MENÚ NORMAL */
@@ -1490,6 +1491,13 @@ footer {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li {
+    list-style: none;
 }
 
 .nav-menu li a {
@@ -1503,6 +1511,37 @@ footer {
     display: none;
     font-size: 40px;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--charcoal);
+    padding: 5px;
+    line-height: 1;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+    color: var(--rose-primary);
+}
+
+/* OVERLAY para cerrar el menú */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 /* RESPONSIVE */
@@ -1512,24 +1551,129 @@ footer {
     }
 
     .nav-menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
         flex-direction: column;
-        align-items: flex-end; /* 👉 alineados a la derecha */
-        background: rgba(253, 251, 247, 0.95);
-        gap: 15px;
-        padding: 20px;
-        display: none;
-    }
-
-    .nav-menu li a {
-        font-size: 1.2rem; /* ⬆ aumenta la letra */
-        font-weight: 600;  /* un poco más fuerte */
+        align-items: flex-start;
+        background: linear-gradient(135deg, var(--rose-pale), var(--cream));
+        backdrop-filter: blur(10px);
+        gap: 0;
+        padding: 100px 30px 30px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        overflow-y: auto;
     }
 
     .nav-menu.active {
-        display: flex;
+        right: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(212, 85, 122, 0.15);
+        animation: slideIn 0.3s ease forwards;
+        opacity: 0;
+    }
+
+    /* Animación escalonada para los items del menú */
+    .nav-menu.active li:nth-child(1) { animation-delay: 0.1s; }
+    .nav-menu.active li:nth-child(2) { animation-delay: 0.15s; }
+    .nav-menu.active li:nth-child(3) { animation-delay: 0.2s; }
+    .nav-menu.active li:nth-child(4) { animation-delay: 0.25s; }
+    .nav-menu.active li:nth-child(5) { animation-delay: 0.3s; }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 18px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .nav-menu li a::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 2px;
+        background: var(--rose-primary);
+        transition: width 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+        color: var(--rose-primary);
+        padding-left: 15px;
+    }
+
+    .nav-menu li a:hover::before {
+        width: 20px;
+    }
+
+    /* CTA especial en mobile */
+    .nav-menu li:last-child {
+        border-bottom: none;
+        margin-top: 20px;
+    }
+
+    .nav-menu .cta-nav {
+        justify-content: center;
+        width: 100%;
+        padding: 15px 25px !important;
+        font-size: 1.1rem;
+    }
+
+    .nav-menu .cta-nav:hover {
+        transform: scale(1.05);
     }
 }
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu li a {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+    .menu-toggle {
+        font-size: 35px;
+    }
+
+    .nav-menu {
+        width: 85%;
+        max-width: 280px;
+        padding: 90px 25px 25px;
+    }
+
+    .nav-menu li a {
+        font-size: 1.1rem;
+        padding: 15px 0;
+    }
+}
+
+
