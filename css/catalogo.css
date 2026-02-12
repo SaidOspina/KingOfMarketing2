@@ -1814,7 +1814,6 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 12px 20px;
-    background: #fff;
     position: relative;
 }
 
@@ -1838,7 +1837,7 @@ footer {
 /* BOTÓN HAMBURGUESA */
 .menu-toggle {
     display: none;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
 
@@ -1852,15 +1851,18 @@ footer {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 100%;
-        background: #fff;
+        width: 50%;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end; /* 👉 alineados a la derecha */
+        background: rgba(253, 251, 247, 0.95);
         gap: 15px;
-        padding: 20px 0;
-
-        /* Oculto por defecto */
+        padding: 20px;
         display: none;
+    }
+
+    .nav-menu li a {
+        font-size: 1.2rem; /* ⬆ aumenta la letra */
+        font-weight: 600;  /* un poco más fuerte */
     }
 
     .nav-menu.active {
