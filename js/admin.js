@@ -408,7 +408,7 @@ class AdminPanel {
                 </div>
                 <div class="form-group">
                     <label>URL de Imagen</label>
-                    <input type="text" name="image" value="${product?.image || '../img/ImgProvicional.jpg'}" required>
+                    <input type="text" name="image" value="${product?.image || '../img/ImgDetalle6.jpeg'}" required>
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn-cancel" onclick="admin.closeModal()">Cancelar</button>
@@ -846,9 +846,9 @@ class AdminPanel {
         if (saved) return JSON.parse(saved);
 
         return [
-            { title: 'Creación 1', url: '../img/ImgProvicional.jpg' },
-            { title: 'Creación 2', url: '../img/ImgProvicional2.jpg' },
-            { title: 'Creación 3', url: '../img/ImgProvicional3.jpg' }
+            { title: 'Creación 1', url: '../img/ImgDetalle2.jpeg' },
+            { title: 'Creación 2', url: '../img/ImgDetalle4.jpeg' },
+            { title: 'Creación 3', url: '../img/ImgDetalle8.jpeg' }
         ];
     }
 
