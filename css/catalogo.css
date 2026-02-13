@@ -1363,10 +1363,6 @@ footer {
         gap: 1rem;
     }
 
-    .nav-menu li:not(:last-child) {
-        display: none;
-    }
-
     .hero {
         text-align: center;
         padding-top: 8rem;
