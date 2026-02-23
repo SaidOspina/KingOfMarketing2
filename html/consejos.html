@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consejos - Creations By Mariols</title>
+    <title>Consejos — Creations By Maydol</title>
     <link rel="icon" type="image/x-icon" href="../img/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/catalogo.css">
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <nav class="navbar">
             <a href="../index.html" class="logo-link">
-                <img src="../img/logo.png" alt="Creations By Mariols" class="logo-img">
+                <img src="../img/logo.png" alt="Creations By Maydol" class="logo-img">
             </a>
-
-            <!-- Botón hamburguesa -->
-            <div class="menu-toggle" id="menuToggle">
-                ☰
-            </div>
-
+            <div class="menu-toggle" id="menuToggle">&#9776;</div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../html/catalogo.html">Catálogo</a></li>
@@ -30,7 +24,7 @@
                 <li><a href="../html/consejos.html">Consejos</a></li>
                 <li>
                     <a href="#" class="cta-nav cart-toggle" id="cartToggle">
-                        <span class="cart-icon">🛒</span>
+                        <span class="cart-icon">Carrito</span>
                         <span class="cart-count" id="cartCount">0</span>
                     </a>
                 </li>
@@ -38,17 +32,16 @@
         </nav>
     </header>
 
-    <!-- Shopping Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h2>🛒 Mi Carrito</h2>
-            <button class="cart-close" id="cartClose">✕</button>
+            <h2>Mi Carrito</h2>
+            <button class="cart-close" id="cartClose">&times;</button>
         </div>
         <div class="cart-items" id="cartItems">
             <div class="cart-empty">
-                <div class="empty-icon">🎁</div>
+                <div class="empty-icon" style="font-size: 2rem; opacity: 0.4;">&#9744;</div>
                 <p>Tu carrito está vacío</p>
-                <p class="empty-subtitle">¡Agrega productos para comenzar!</p>
+                <p class="empty-subtitle">Agrega productos para comenzar</p>
             </div>
         </div>
         <div class="cart-footer">
@@ -60,21 +53,13 @@
             <button class="btn-clear-cart" id="clearCart">Vaciar Carrito</button>
         </div>
     </div>
-
-    <!-- Cart Overlay -->
     <div class="cart-overlay" id="cartOverlay"></div>
 
-    <!-- Tips Hero -->
-    <section class="hero" style="min-height: 60vh; padding-top: 10rem;">
-        <div class="hero-content" style="text-align: left; max-width: 800px; margin: 0 auto;">
-            <div class="hero-subtitle">✦ Centro de Conocimiento</div>
-            <h1 style="text-align: left;">
-                Comunidad de
-                <span class="highlight">Consejos</span>
-            </h1>
-            <p class="hero-description" style="text-align: center;">
-                Aprende, comparte y descubre los mejores tips para crear sorpresas inolvidables
-            </p>
+    <section class="hero" style="min-height: 55vh; padding-top: 10rem;">
+        <div class="hero-content" style="max-width: 700px; margin: 0 auto;">
+            <div class="hero-subtitle">Centro de Conocimiento</div>
+            <h1>Comunidad de <span class="highlight">Consejos</span></h1>
+            <p class="hero-description">Aprende, comparte y descubre los mejores tips para crear sorpresas inolvidables</p>
         </div>
     </section>
 
@@ -85,42 +70,30 @@
                 <div class="section-label">Explora por Categoría</div>
                 <h2 class="section-title">Temas Populares</h2>
             </div>
-
             <div class="forum-categories">
                 <div class="category-card fade-in">
-                    <div class="category-icon">💝</div>
+                    <div class="category-icon">&#9829;</div>
                     <h3 class="category-title">Sorpresas Románticas</h3>
                     <p class="category-count">12 publicaciones</p>
-                    <p class="category-description">
-                        Ideas creativas para enamorar y sorprender a tu pareja
-                    </p>
+                    <p class="category-description">Ideas creativas para enamorar y sorprender a tu pareja</p>
                 </div>
-
                 <div class="category-card fade-in">
-                    <div class="category-icon">🧀</div>
+                    <div class="category-icon">&#9733;</div>
                     <h3 class="category-title">Charcutería Perfecta</h3>
                     <p class="category-count">8 publicaciones</p>
-                    <p class="category-description">
-                        Aprende a armar y presentar tablas gourmet profesionales
-                    </p>
+                    <p class="category-description">Aprende a armar y presentar tablas gourmet profesionales</p>
                 </div>
-
                 <div class="category-card fade-in">
-                    <div class="category-icon">🎉</div>
+                    <div class="category-icon">&#10022;</div>
                     <h3 class="category-title">Organización de Eventos</h3>
                     <p class="category-count">15 publicaciones</p>
-                    <p class="category-description">
-                        Tips para planificar celebraciones inolvidables
-                    </p>
+                    <p class="category-description">Tips para planificar celebraciones inolvidables</p>
                 </div>
-
                 <div class="category-card fade-in">
-                    <div class="category-icon">🎨</div>
-                    <h3 class="category-title">Decoración & Presentación</h3>
+                    <div class="category-icon">&#10023;</div>
+                    <h3 class="category-title">Decoración &amp; Presentación</h3>
                     <p class="category-count">10 publicaciones</p>
-                    <p class="category-description">
-                        Técnicas para hacer que tus regalos luzcan espectaculares
-                    </p>
+                    <p class="category-description">Técnicas para hacer que tus regalos luzcan espectaculares</p>
                 </div>
             </div>
         </div>
@@ -133,53 +106,22 @@
                 <div class="section-label">Publicaciones Recientes</div>
                 <h2 class="section-title">Consejos de la Comunidad</h2>
             </div>
-
             <div class="forum-posts">
-                <!-- Post 1: Video Tutorial -->
                 <article class="forum-post fade-in">
                     <div class="post-header">
-                        <div class="post-avatar">🎬</div>
+                        <div class="post-avatar">M</div>
                         <div class="post-meta">
                             <h3>Cómo Armar una Tabla de Quesos Profesional</h3>
-                            <p class="post-info">
-                                Por <strong>Mariols</strong> • Hace 2 días
-                                <span class="post-category-tag">Charcutería</span>
-                            </p>
+                            <p class="post-info">Por <strong>Maydol</strong> &middot; Hace 2 días <span class="post-category-tag">Charcutería</span></p>
                         </div>
                     </div>
                     <div class="post-content">
-                        <p class="post-text">
-                            En este tutorial paso a paso te enseño cómo seleccionar, combinar y presentar quesos 
-                            de manera profesional. Aprenderás sobre texturas, sabores y la presentación perfecta 
-                            para impresionar a tus invitados.
-                        </p>
+                        <p class="post-text">En este tutorial paso a paso te enseño cómo seleccionar, combinar y presentar quesos de manera profesional. Aprenderás sobre texturas, sabores y la presentación perfecta para impresionar a tus invitados.</p>
                         <div class="post-media">
-                            <div style="
-                                position: relative;
-                                max-width: 360px;
-                                margin: 0 auto;
-                                border-radius: 15px;
-                                overflow: hidden;
-                                background: #000;
-                            ">
-                                <video 
-                                    src="../img/video1.mp4"
-                                    autoplay
-                                    muted
-                                    loop
-                                    playsinline
-                                    preload="metadata"
-                                    style="
-                                        width: 100%;
-                                        height: auto;
-                                        display: block;
-                                        object-fit: contain;
-                                    ">
-                                    Tu navegador no soporta videos HTML5.
-                                </video>
+                            <div style="position: relative; max-width: 360px; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #1E1610;">
+                                <video src="../img/video1.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; height: auto; display: block; object-fit: contain;">Tu navegador no soporta videos HTML5.</video>
                             </div>
                         </div>
-
                         <div class="post-tips-list">
                             <h4>Puntos Clave del Video:</h4>
                             <ul>
@@ -192,30 +134,22 @@
                         </div>
                     </div>
                     <div class="post-footer">
-                        <span class="post-action">👍 245 Me gusta</span>
-                        <span class="post-action">💬 18 Comentarios</span>
-                        <span class="post-action">🔖 Guardar</span>
+                        <span class="post-action">245 Me gusta</span>
+                        <span class="post-action">18 Comentarios</span>
+                        <span class="post-action">Guardar</span>
                     </div>
                 </article>
 
-                <!-- Post 2: Image Gallery Post -->
                 <article class="forum-post fade-in">
                     <div class="post-header">
-                        <div class="post-avatar">📸</div>
+                        <div class="post-avatar">M</div>
                         <div class="post-meta">
                             <h3>10 Ideas de Presentación para Cajas de Regalo</h3>
-                            <p class="post-info">
-                                Por <strong>Mariols</strong> • Hace 5 días
-                                <span class="post-category-tag">Decoración</span>
-                            </p>
+                            <p class="post-info">Por <strong>Maydol</strong> &middot; Hace 5 días <span class="post-category-tag">Decoración</span></p>
                         </div>
                     </div>
                     <div class="post-content">
-                        <p class="post-text">
-                            La presentación es tan importante como el contenido. Aquí te muestro 10 formas 
-                            creativas de presentar tus cajas de regalo para causar un impacto memorable desde 
-                            el primer momento.
-                        </p>
+                        <p class="post-text">La presentación es tan importante como el contenido. Aquí te muestro 10 formas creativas de presentar tus cajas de regalo para causar un impacto memorable desde el primer momento.</p>
                         <div class="post-media">
                             <img src="../img/ImgDetalle9.jpeg" alt="Ideas de presentación" class="post-image">
                         </div>
@@ -231,29 +165,22 @@
                         </div>
                     </div>
                     <div class="post-footer">
-                        <span class="post-action">👍 198 Me gusta</span>
-                        <span class="post-action">💬 32 Comentarios</span>
-                        <span class="post-action">🔖 Guardar</span>
+                        <span class="post-action">198 Me gusta</span>
+                        <span class="post-action">32 Comentarios</span>
+                        <span class="post-action">Guardar</span>
                     </div>
                 </article>
 
-                <!-- Post 3: Planning Tips -->
                 <article class="forum-post fade-in">
                     <div class="post-header">
-                        <div class="post-avatar">📋</div>
+                        <div class="post-avatar">M</div>
                         <div class="post-meta">
                             <h3>Guía Completa: Planifica tu Evento Especial</h3>
-                            <p class="post-info">
-                                Por <strong>Mariols</strong> • Hace 1 semana
-                                <span class="post-category-tag">Eventos</span>
-                            </p>
+                            <p class="post-info">Por <strong>Maydol</strong> &middot; Hace 1 semana <span class="post-category-tag">Eventos</span></p>
                         </div>
                     </div>
                     <div class="post-content">
-                        <p class="post-text">
-                            Planificar un evento puede ser estresante, pero con la organización correcta, 
-                            todo fluye perfectamente. Aquí está mi checklist probada para eventos exitosos.
-                        </p>
+                        <p class="post-text">Planificar un evento puede ser estresante, pero con la organización correcta, todo fluye perfectamente. Aquí está mi checklist probada para eventos exitosos.</p>
                         <div class="post-tips-list">
                             <h4>Timeline de Planificación:</h4>
                             <ul>
@@ -267,159 +194,19 @@
                         </div>
                     </div>
                     <div class="post-footer">
-                        <span class="post-action">👍 312 Me gusta</span>
-                        <span class="post-action">💬 56 Comentarios</span>
-                        <span class="post-action">🔖 Guardar</span>
-                    </div>
-                </article>
-
-                <!-- Post 4: Video - Surprise Ideas -->
-                <article class="forum-post fade-in">
-                    <div class="post-header">
-                        <div class="post-avatar">🎬</div>
-                        <div class="post-meta">
-                            <h3>5 Sorpresas Románticas que Nunca Fallan</h3>
-                            <p class="post-info">
-                                Por <strong>Mariols</strong> • Hace 1 semana
-                                <span class="post-category-tag">Sorpresas</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <p class="post-text">
-                            ¿Quieres enamorar pero no sabes cómo? En este video te comparto 5 ideas de sorpresas 
-                            románticas que han emocionado a cientos de parejas. ¡Prepárate para ver lágrimas de felicidad!
-                        </p>
-                        <div class="post-media">
-                            <div style="
-                                position: relative;
-                                max-width: 360px;
-                                margin: 0 auto;
-                                border-radius: 15px;
-                                overflow: hidden;
-                                background: #000;
-                            ">
-                                <video 
-                                    src="../img/video2.mp4"
-                                    autoplay
-                                    muted
-                                    loop
-                                    playsinline
-                                    preload="metadata"
-                                    style="
-                                        width: 100%;
-                                        height: auto;
-                                        display: block;
-                                        object-fit: contain;
-                                    ">
-                                    Tu navegador no soporta videos HTML5.
-                                </video>
-                            </div>
-                        </div>
-
-                        <div class="post-tips-list">
-                            <h4>Las 5 Sorpresas:</h4>
-                            <ul>
-                                <li>Desayuno en cama con flores y carta personalizada</li>
-                                <li>Trail de fotos con recuerdos especiales</li>
-                                <li>Cena sorpresa en casa decorada temáticamente</li>
-                                <li>Caja de "razones por las que te amo"</li>
-                                <li>Picnic nocturno bajo las estrellas</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="post-footer">
-                        <span class="post-action">👍 567 Me gusta</span>
-                        <span class="post-action">💬 89 Comentarios</span>
-                        <span class="post-action">🔖 Guardar</span>
-                    </div>
-                </article>
-
-                <!-- Post 5: Seasonal Tips -->
-                <article class="forum-post fade-in">
-                    <div class="post-header">
-                        <div class="post-avatar">🌸</div>
-                        <div class="post-meta">
-                            <h3>Flores de Temporada: Qué Elegir Cada Mes</h3>
-                            <p class="post-info">
-                                Por <strong>Mariols</strong> • Hace 2 semanas
-                                <span class="post-category-tag">Decoración</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <p class="post-text">
-                            Elegir flores de temporada no solo es más económico, sino que garantiza frescura 
-                            y belleza. Aquí está mi guía mensual para seleccionar las mejores flores.
-                        </p>
-                        <div class="post-media">
-                            <img src="../img/ImgDetalle10.jpeg" alt="Flores de temporada" class="post-image">
-                        </div>
-                        <div class="post-tips-list">
-                            <h4>Calendario Floral:</h4>
-                            <ul>
-                                <li><strong>Primavera:</strong> Tulipanes, peonías, lilas</li>
-                                <li><strong>Verano:</strong> Girasoles, hortensias, lavanda</li>
-                                <li><strong>Otoño:</strong> Dalias, crisantemos, rosas</li>
-                                <li><strong>Invierno:</strong> Amarilis, poinsettias, eucalipto</li>
-                                <li><strong>Todo el año:</strong> Rosas, claveles, alstroemerias</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="post-footer">
-                        <span class="post-action">👍 423 Me gusta</span>
-                        <span class="post-action">💬 67 Comentarios</span>
-                        <span class="post-action">🔖 Guardar</span>
-                    </div>
-                </article>
-
-                <!-- Post 6: Budget Tips -->
-                <article class="forum-post fade-in">
-                    <div class="post-header">
-                        <div class="post-avatar">💰</div>
-                        <div class="post-meta">
-                            <h3>Regalos Increíbles con Presupuesto Limitado</h3>
-                            <p class="post-info">
-                                Por <strong>Mariols</strong> • Hace 3 semanas
-                                <span class="post-category-tag">Sorpresas</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <p class="post-text">
-                            No necesitas gastar una fortuna para crear un regalo memorable. Lo que realmente 
-                            importa es el pensamiento y el esfuerzo que pongas en personalizar tu sorpresa.
-                        </p>
-                        <div class="post-tips-list">
-                            <h4>Ideas Económicas pero Impactantes:</h4>
-                            <ul>
-                                <li>Crea un álbum de fotos digital personalizado</li>
-                                <li>Arma una caja con sus snacks favoritos</li>
-                                <li>Escribe 52 cartas (una para cada semana del año)</li>
-                                <li>Prepara un playlist personalizado con canciones especiales</li>
-                                <li>Organiza una cacería del tesoro casera</li>
-                                <li>Haz cupones personalizados de experiencias juntos</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="post-footer">
-                        <span class="post-action">👍 891 Me gusta</span>
-                        <span class="post-action">💬 134 Comentarios</span>
-                        <span class="post-action">🔖 Guardar</span>
+                        <span class="post-action">312 Me gusta</span>
+                        <span class="post-action">56 Comentarios</span>
+                        <span class="post-action">Guardar</span>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
             <h2>¿Tienes Alguna Pregunta?</h2>
-            <p>
-                Estamos aquí para ayudarte a crear la sorpresa perfecta. 
-                Contáctanos y recibe asesoría personalizada.
-            </p>
+            <p>Estamos aquí para ayudarte a crear la sorpresa perfecta. Contáctanos y recibe asesoría personalizada.</p>
             <div class="cta-buttons">
                 <a href="https://wa.me/573001234567" class="btn-white">Consultar por WhatsApp</a>
                 <a href="catalogo.html" class="btn-outline">Ver Catálogo</a>
@@ -427,21 +214,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="../img/logo.png" alt="Creations By Mariols" class="footer-logo">
-                <p>
-                    Creando momentos inolvidables desde el corazón.
-                </p>
+                <img src="../img/logo.png" alt="Creations By Maydol" class="footer-logo">
+                <p>Creando momentos inolvidables desde el corazón.</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">📷</a>
-                    <a href="#" class="social-icon">💬</a>
+                    <a href="#" class="social-icon">Fb</a>
+                    <a href="#" class="social-icon">Ig</a>
+                    <a href="#" class="social-icon">Wa</a>
                 </div>
             </div>
-
             <div class="footer-column">
                 <h4>Productos</h4>
                 <ul class="footer-links">
@@ -449,7 +232,6 @@
                     <li><a href="../index.html#productos">Especialidades</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>Información</h4>
                 <ul class="footer-links">
@@ -458,19 +240,17 @@
                     <li><a href="galeria.html">Galería</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>Contacto</h4>
                 <ul class="footer-links">
-                    <li><a href="#">📍 Cúcuta, Colombia</a></li>
-                    <li><a href="#">📱 +57 300 123 4567</a></li>
-                    <li><a href="#">📧 info@creationsbymariols.com</a></li>
+                    <li><a href="#">Cúcuta, Colombia</a></li>
+                    <li><a href="#">+57 300 123 4567</a></li>
+                    <li><a href="#">info@creationsbymaydol.com</a></li>
                 </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2026 Creations By Mariols. Todos los derechos reservados. Hecho con amor 💝</p>
+            <p>&copy; 2026 Creations By Maydol. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="../js/index.js"></script>

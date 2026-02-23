@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creations By Mariols - Arte en Regalos y Charcutería</title>
+    <title>Creations By Maydol — Arte en Regalos y Charcutería</title>
     <link rel="icon" type="image/x-icon" href="img/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,24 +13,18 @@
 <body>
     <!-- Loader -->
     <div class="loader">
-        <img src="img/logo.png" alt="Creations By Mariols" class="loader-logo">
-        <div class="loader-text">CREATIONS BY MARIOLS</div>
+        <img src="img/logo.png" alt="Creations By Maydol" class="loader-logo">
+        <div class="loader-text">Creations By Maydol</div>
     </div>
-
-    <!-- Floating Elements -->
-    <div class="floating-elements" id="floatingElements"></div>
 
     <!-- Header -->
     <header id="header">
         <nav class="navbar">
             <a href="index.html" class="logo-link">
-                <img src="img/logo.png" alt="Creations By Mariols" class="logo-img">
+                <img src="img/logo.png" alt="Creations By Maydol" class="logo-img">
             </a>
 
-            <!-- Botón hamburguesa -->
-            <div class="menu-toggle" id="menuToggle">
-                ☰
-            </div>
+            <div class="menu-toggle" id="menuToggle">&#9776;</div>
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Inicio</a></li>
@@ -39,26 +33,25 @@
                 <li><a href="html/consejos.html">Consejos</a></li>
                 <li>
                     <a href="#" class="cta-nav cart-toggle" id="cartToggle">
-                        <span class="cart-icon">🛒</span>
+                        <span class="cart-icon">Carrito</span>
                         <span class="cart-count" id="cartCount">0</span>
                     </a>
                 </li>
             </ul>
         </nav>
-
     </header>
 
     <!-- Shopping Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h2>🛒 Mi Carrito</h2>
-            <button class="cart-close" id="cartClose">✕</button>
+            <h2>Mi Carrito</h2>
+            <button class="cart-close" id="cartClose">&times;</button>
         </div>
         <div class="cart-items" id="cartItems">
             <div class="cart-empty">
-                <div class="empty-icon">🎁</div>
+                <div class="empty-icon" style="font-size: 2rem; opacity: 0.4;">&#9744;</div>
                 <p>Tu carrito está vacío</p>
-                <p class="empty-subtitle">¡Agrega productos para comenzar!</p>
+                <p class="empty-subtitle">Agrega productos para comenzar</p>
             </div>
         </div>
         <div class="cart-footer">
@@ -77,7 +70,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <div class="hero-subtitle">✦ Regalos Extraordinarios</div>
+            <div class="hero-subtitle">Regalos Extraordinarios</div>
             <h1>
                 Creamos Momentos
                 <span class="highlight">Inolvidables</span>
@@ -97,12 +90,7 @@
     <section class="hero-visual-section">
         <div class="hero-visual">
             <div class="hero-image-container">
-                <img src="img/logo.png" alt="Regalo Especial" class="hero-image">
-            </div>
-            <div class="decorative-hearts">
-                <div class="decorative-heart">💕</div>
-                <div class="decorative-heart">💖</div>
-                <div class="decorative-heart">💝</div>
+                <img src="img/logo.png" alt="Creations By Maydol" class="hero-image">
             </div>
         </div>
     </section>
@@ -111,22 +99,22 @@
     <section class="trust-section">
         <div class="trust-container">
             <div class="trust-item">
-                <div class="trust-icon">✨</div>
+                <div class="trust-icon">&#10022;</div>
                 <h3>100% Personalizado</h3>
                 <p>Cada detalle pensado para ti</p>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">🏆</div>
+                <div class="trust-icon">&#9733;</div>
                 <h3>Calidad Premium</h3>
                 <p>Productos seleccionados</p>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">💝</div>
-                <h3>Con Amor</h3>
-                <p>Elaborado con dedicación</p>
+                <div class="trust-icon">&#9829;</div>
+                <h3>Con Dedicación</h3>
+                <p>Elaborado con cariño</p>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">🚚</div>
+                <div class="trust-icon">&#10148;</div>
                 <h3>Entrega Rápida</h3>
                 <p>Directo a tu puerta</p>
             </div>
@@ -145,7 +133,7 @@
         </div>
 
         <div class="products-grid">
-            <div class="product-card fade-in" data-product='{"id":1,"name":"Cajas de Amor","price":45000,"image":"img/ImgDetalle1.jpeg","category":"Regalos Románticos"}'>
+            <div class="product-card fade-in" data-product='{"id":1,"name":"Cajas de Amor","price":45000,"image":"img/ImgDetalle1.jpeg","category":"Regalos Románticos","description":"Sorpresas personalizadas con flores, chocolates y detalles únicos para expresar tus sentimientos más profundos.","includes":["Flores frescas de temporada","Chocolates artesanales (6 pzas)","Tarjeta personalizada","Caja decorativa premium"]}'>
                 <div class="product-image">
                     <img src="img/ImgDetalle1.jpeg" alt="Cajas de Amor" class="product-img">
                 </div>
@@ -157,11 +145,11 @@
                         para expresar tus sentimientos más profundos.
                     </p>
                     <div class="product-price">$45.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                    <button class="btn-add-cart">Agregar al Carrito</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in" data-product='{"id":2,"name":"Tablas Gourmet","price":65000,"image":"img/ImgDetalle2.jpeg","category":"Charcutería Premium"}'>
+            <div class="product-card fade-in" data-product='{"id":2,"name":"Tablas Gourmet","price":65000,"image":"img/ImgDetalle2.jpeg","category":"Charcutería Premium","description":"Selección exquisita de quesos artesanales, embutidos de primera y acompañamientos perfectamente combinados.","includes":["3 tipos de quesos importados","Embutidos seleccionados","Frutos secos y frutas","Pan artesanal y crackers","Mermelada gourmet"]}'>
                 <div class="product-image">
                     <img src="img/ImgDetalle2.jpeg" alt="Tablas Gourmet" class="product-img">
                 </div>
@@ -173,11 +161,11 @@
                         y acompañamientos perfectamente combinados.
                     </p>
                     <div class="product-price">$65.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                    <button class="btn-add-cart">Agregar al Carrito</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in" data-product='{"id":3,"name":"Eventos Especiales","price":120000,"image":"img/ImgDetalle3.jpeg","category":"Celebraciones"}'>
+            <div class="product-card fade-in" data-product='{"id":3,"name":"Eventos Especiales","price":120000,"image":"img/ImgDetalle3.jpeg","category":"Celebraciones","description":"Paquetes personalizados para bodas, aniversarios, cumpleaños y momentos que merecen ser inolvidables.","includes":["Decoración temática completa","Tabla de charcutería para 10","Arreglo floral central","Detalles personalizados"]}'>
                 <div class="product-image">
                     <img src="img/ImgDetalle3.jpeg" alt="Eventos Especiales" class="product-img">
                 </div>
@@ -189,11 +177,11 @@
                         y momentos que merecen ser inolvidables.
                     </p>
                     <div class="product-price">$120.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                    <button class="btn-add-cart">Agregar al Carrito</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in" data-product='{"id":4,"name":"Chocolates Artesanales","price":35000,"image":"img/ImgDetalle4.jpeg","category":"Delicias Dulces"}'>
+            <div class="product-card fade-in" data-product='{"id":4,"name":"Chocolates Artesanales","price":35000,"image":"img/ImgDetalle4.jpeg","category":"Delicias Dulces","description":"Chocolates premium y postres gourmet para endulzar los momentos más especiales con tus seres queridos.","includes":["15 bombones artesanales","Caja de presentación","Variedad de sabores","Tarjeta de regalo"]}'>
                 <div class="product-image">
                     <img src="img/ImgDetalle4.jpeg" alt="Chocolates Artesanales" class="product-img">
                 </div>
@@ -205,11 +193,11 @@
                         los momentos más especiales con tus seres queridos.
                     </p>
                     <div class="product-price">$35.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                    <button class="btn-add-cart">Agregar al Carrito</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in" data-product='{"id":5,"name":"Combos Personalizados","price":85000,"image":"img/ImgDetalle5.jpeg","category":"Sorpresas Únicas"}'>
+            <div class="product-card fade-in" data-product='{"id":5,"name":"Combos Personalizados","price":85000,"image":"img/ImgDetalle5.jpeg","category":"Sorpresas Únicas","description":"Combinaciones únicas de regalos y delicias creadas especialmente para esa persona tan especial.","includes":["Selección personalizada","Flores y chocolates","Tabla de quesos mini","Vino o bebida a elección"]}'>
                 <div class="product-image">
                     <img src="img/ImgDetalle5.jpeg" alt="Combos Personalizados" class="product-img">
                 </div>
@@ -221,23 +209,23 @@
                         especialmente para esa persona tan especial.
                     </p>
                     <div class="product-price">$85.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                    <button class="btn-add-cart">Agregar al Carrito</button>
                 </div>
             </div>
 
-            <div class="product-card fade-in" data-product='{"id":6,"name":"Arreglos Florales","price":55000,"image":"img/ImgDetalle6.jpeg","category":"Amor Eterno"}'>
+            <div class="product-card fade-in" data-product='{"id":6,"name":"Arreglos Florales","price":55000,"image":"img/ImgDetalle6.jpeg","category":"Flores","description":"Flores frescas y arreglos exclusivos que transmiten amor, admiración y los sentimientos más puros.","includes":["12 rosas premium","Follaje decorativo","Papel de presentación","Lazo de satén"]}'>
                 <div class="product-image">
                     <img src="img/ImgDetalle6.jpeg" alt="Arreglos Florales" class="product-img">
                 </div>
                 <div class="product-content">
-                    <div class="product-category">Amor Eterno</div>
+                    <div class="product-category">Flores</div>
                     <h3 class="product-title">Arreglos Florales</h3>
                     <p class="product-description">
                         Flores frescas y arreglos exclusivos que transmiten 
                         amor, admiración y los sentimientos más puros.
                     </p>
                     <div class="product-price">$55.000</div>
-                    <button class="btn-add-cart">Agregar al Carrito 🛒</button>
+                    <button class="btn-add-cart">Agregar al Carrito</button>
                 </div>
             </div>
         </div>
@@ -254,27 +242,13 @@
         </div>
 
         <div class="gallery-grid">
-            <div class="gallery-item fade-in">
-                <img src="img/ImgDad1.jpeg" alt="Creación 1">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="img/ImgMom.jpeg" alt="Creación 2">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="img/ImgDetalle7.jpeg" alt="Creación 3">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="img/ImgDad2.jpeg" alt="Creación 4">
-            </div>
-            <div class="gallery-item fade-in large">
-                <img src="img/ImgMom2.jpeg" alt="Creación 5">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="img/ImgDetalle8.jpeg" alt="Creación 6">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="img/ImgDad3.jpeg" alt="Creación 7">
-            </div>
+            <div class="gallery-item fade-in"><img src="img/ImgDad1.jpeg" alt="Creación 1"></div>
+            <div class="gallery-item fade-in"><img src="img/ImgMom.jpeg" alt="Creación 2"></div>
+            <div class="gallery-item fade-in"><img src="img/ImgDetalle7.jpeg" alt="Creación 3"></div>
+            <div class="gallery-item fade-in"><img src="img/ImgDad2.jpeg" alt="Creación 4"></div>
+            <div class="gallery-item fade-in large"><img src="img/ImgMom2.jpeg" alt="Creación 5"></div>
+            <div class="gallery-item fade-in"><img src="img/ImgDetalle8.jpeg" alt="Creación 6"></div>
+            <div class="gallery-item fade-in"><img src="img/ImgDad3.jpeg" alt="Creación 7"></div>
         </div>
     </section>
 
@@ -292,14 +266,14 @@
             <div class="testimonial-card fade-in">
                 <p class="testimonial-text">
                     La tabla de charcutería que pedí para nuestro aniversario fue simplemente espectacular. 
-                    Cada detalle cuidado con amor. Mi esposo quedó enamorado. ¡Totalmente recomendado!
+                    Cada detalle cuidado con amor. Mi esposo quedó enamorado. Totalmente recomendado.
                 </p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">💕</div>
+                    <div class="author-avatar">MG</div>
                     <div class="author-info">
                         <h4>María González</h4>
                         <p>Cúcuta</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     </div>
                 </div>
             </div>
@@ -307,14 +281,14 @@
             <div class="testimonial-card fade-in">
                 <p class="testimonial-text">
                     Sorprendí a mi novia con una caja personalizada y no pudo contener las lágrimas de emoción. 
-                    Mariols tiene un don especial para crear momentos mágicos. ¡Gracias infinitas!
+                    Maydol tiene un don especial para crear momentos mágicos. Gracias infinitas.
                 </p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">💖</div>
+                    <div class="author-avatar">CR</div>
                     <div class="author-info">
                         <h4>Carlos Ramírez</h4>
                         <p>Cúcuta</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     </div>
                 </div>
             </div>
@@ -325,11 +299,11 @@
                     La calidad, presentación y sabor son excepcionales. Sin duda volveré a ordenar.
                 </p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">💝</div>
+                    <div class="author-avatar">AM</div>
                     <div class="author-info">
                         <h4>Ana Martínez</h4>
                         <p>Cúcuta</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     </div>
                 </div>
             </div>
@@ -346,7 +320,7 @@
             </p>
             <div class="cta-buttons">
                 <a href="https://wa.me/573001234567" class="btn-white">WhatsApp</a>
-                <a href="mailto:info@creationsbymariols.com" class="btn-outline">Enviar Email</a>
+                <a href="mailto:info@creationsbymaydol.com" class="btn-outline">Enviar Email</a>
             </div>
         </div>
     </section>
@@ -355,15 +329,15 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="img/logo.png" alt="Creations By Mariols" class="footer-logo">
+                <img src="img/logo.png" alt="Creations By Maydol" class="footer-logo">
                 <p>
                     Creando momentos inolvidables desde el corazón. 
                     Cada regalo cuenta una historia, cada detalle expresa amor.
                 </p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">📷</a>
-                    <a href="#" class="social-icon">💬</a>
+                    <a href="#" class="social-icon">Fb</a>
+                    <a href="#" class="social-icon">Ig</a>
+                    <a href="#" class="social-icon">Wa</a>
                 </div>
             </div>
 
@@ -390,17 +364,28 @@
             <div class="footer-column">
                 <h4>Contacto</h4>
                 <ul class="footer-links">
-                    <li><a href="#">📍 Cúcuta, Colombia</a></li>
-                    <li><a href="#">📱 +57 300 123 4567</a></li>
-                    <li><a href="#">📧 info@creationsbymariols.com</a></li>
+                    <li><a href="#">Cúcuta, Colombia</a></li>
+                    <li><a href="#">+57 300 123 4567</a></li>
+                    <li><a href="#">info@creationsbymaydol.com</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Creations By Mariols. Todos los derechos reservados. Hecho con amor 💝</p>
+            <p>&copy; 2026 Creations By Maydol. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="product-modal-overlay" id="productModalOverlay">
+        <div class="product-modal" id="productModal">
+            <button class="modal-product-close" id="productModalClose">&times;</button>
+            <div id="productModalContent">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-// Catalog Filter and Search System
 class CatalogManager {
     constructor() {
         this.currentCategory = 'todos';
@@ -13,19 +12,13 @@ class CatalogManager {
     }
 
     attachEventListeners() {
-        // Filter buttons
         document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                this.handleFilterClick(e);
-            });
+            btn.addEventListener('click', (e) => this.handleFilterClick(e));
         });
 
-        // Search input
         const searchInput = document.getElementById('searchInput');
         if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                this.handleSearch(e);
-            });
+            searchInput.addEventListener('input', (e) => this.handleSearch(e));
         }
     }
 
@@ -33,14 +26,9 @@ class CatalogManager {
         const btn = e.target;
         const category = btn.dataset.category;
 
-        // Update active state
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
-        // Update current category
         this.currentCategory = category;
-
-        // Re-render products
         this.renderProducts();
     }
 
@@ -51,20 +39,15 @@ class CatalogManager {
 
     getFilteredProducts() {
         let filtered = productsDatabase;
-
-        // Filter by category
         if (this.currentCategory !== 'todos') {
             filtered = filtered.filter(p => p.category === this.currentCategory);
         }
-
-        // Filter by search query
         if (this.searchQuery) {
             filtered = filtered.filter(p => 
                 p.name.toLowerCase().includes(this.searchQuery) ||
                 p.description.toLowerCase().includes(this.searchQuery)
             );
         }
-
         return filtered;
     }
 
@@ -81,23 +64,15 @@ class CatalogManager {
 
     renderProducts() {
         const grid = document.getElementById('productsGrid');
-        const resultsCount = document.getElementById('resultsCount');
         const filtered = this.getFilteredProducts();
 
-        // Update results count
-        if (resultsCount) {
-            resultsCount.innerHTML = `Mostrando <strong>${filtered.length}</strong> producto${filtered.length !== 1 ? 's' : ''}`;
-        }
-
-        // Render products
         if (filtered.length === 0) {
             grid.innerHTML = `
                 <div style="grid-column: 1/-1; text-align: center; padding: 4rem;">
-                    <div style="font-size: 5rem; margin-bottom: 1rem;">😔</div>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--charcoal); margin-bottom: 1rem;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--brown-deep); margin-bottom: 1rem;">
                         No encontramos productos
                     </h3>
-                    <p style="font-size: 1.2rem; color: #666;">
+                    <p style="font-size: 1.1rem; color: var(--text-medium);">
                         Intenta con otros términos de búsqueda o filtros
                     </p>
                 </div>
@@ -107,7 +82,7 @@ class CatalogManager {
 
         grid.innerHTML = filtered.map(product => `
             <div class="product-card fade-in" data-product='${JSON.stringify(product)}'>
-                <div class="product-image">
+                <div class="product-image" onclick="catalog.openProductDetail(${product.id})" style="cursor: pointer;">
                     <img src="${product.image}" alt="${product.name}" class="product-img">
                 </div>
                 <div class="product-content">
@@ -115,21 +90,20 @@ class CatalogManager {
                     <h3 class="product-title">${product.name}</h3>
                     <p class="product-description">${product.description}</p>
                     <div class="product-price">$${product.price.toLocaleString()}</div>
-                    <button class="btn-add-cart" onclick="catalog.addToCart(${product.id})">
-                        Agregar al Carrito 🛒
+                    <button class="btn-add-cart" onclick="catalog.openProductDetail(${product.id})">
+                        Ver Detalles y Personalizar
                     </button>
                 </div>
             </div>
         `).join('');
 
-        // Re-initialize scroll animations
-        setTimeout(() => {
-            this.initScrollAnimations();
-        }, 100);
+        setTimeout(() => this.initScrollAnimations(), 100);
+    }
 
-        // Scroll to products
-        if (this.searchQuery || this.currentCategory !== 'todos') {
-            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    openProductDetail(productId) {
+        const product = productsDatabase.find(p => p.id === productId);
+        if (product && window.productModal) {
+            window.productModal.open(product);
         }
     }
 
@@ -146,9 +120,8 @@ class CatalogManager {
         if (card) {
             const btn = card.querySelector('.btn-add-cart');
             const originalText = btn.textContent;
-            btn.textContent = '✓ Agregado!';
-            btn.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
-            
+            btn.textContent = 'Agregado';
+            btn.style.background = '#6B8E6B';
             setTimeout(() => {
                 btn.textContent = originalText;
                 btn.style.background = '';
@@ -157,18 +130,13 @@ class CatalogManager {
     }
 
     initScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('.fade-in').forEach(element => {
             observer.observe(element);
@@ -176,7 +144,6 @@ class CatalogManager {
     }
 }
 
-// Initialize catalog manager when DOM is ready
 let catalog;
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {

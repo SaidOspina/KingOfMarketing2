@@ -1,5 +1,3 @@
-// ============ LOGIN HANDLER ============
-
 class LoginManager {
     constructor() {
         this.init();
@@ -18,7 +16,6 @@ class LoginManager {
             });
         }
 
-        // Check if already logged in
         if (this.isLoggedIn()) {
             window.location.href = 'html/admin.html';
         }
@@ -28,36 +25,25 @@ class LoginManager {
         const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value;
 
-        // Simulación de autenticación
-        if (username === 'admin' && password === 'mariols2026') {
-            // Guardar sesión
+        if (username === 'admin' && password === 'maydol2026') {
             this.setSession();
-            
-            // Mostrar mensaje de éxito
-            this.showSuccess('¡Bienvenido! Redirigiendo...');
-            
-            // Redirigir al panel
+            this.showSuccess('Bienvenido. Redirigiendo...');
             setTimeout(() => {
                 window.location.href = 'html/admin.html';
             }, 1000);
         } else {
             this.showError('Usuario o contraseña incorrectos');
-            
-            // Shake animation on error
             const card = document.querySelector('.login-card');
             card.style.animation = 'shake 0.5s';
-            setTimeout(() => {
-                card.style.animation = '';
-            }, 500);
+            setTimeout(() => { card.style.animation = ''; }, 500);
         }
     }
 
     setSession() {
-        // Guardar en localStorage
         const sessionData = {
             user: 'admin',
             loginTime: new Date().getTime(),
-            expiresIn: 24 * 60 * 60 * 1000 // 24 horas
+            expiresIn: 24 * 60 * 60 * 1000
         };
         localStorage.setItem('adminSession', JSON.stringify(sessionData));
     }
@@ -65,38 +51,25 @@ class LoginManager {
     isLoggedIn() {
         const session = localStorage.getItem('adminSession');
         if (!session) return false;
-
         try {
             const sessionData = JSON.parse(session);
-            const currentTime = new Date().getTime();
-            const elapsed = currentTime - sessionData.loginTime;
-
-            // Verificar si la sesión ha expirado
+            const elapsed = new Date().getTime() - sessionData.loginTime;
             if (elapsed > sessionData.expiresIn) {
                 localStorage.removeItem('adminSession');
                 return false;
             }
-
             return true;
-        } catch (error) {
-            return false;
-        }
+        } catch { return false; }
     }
 
-    showSuccess(message) {
-        this.showNotification(message, 'success');
-    }
-
-    showError(message) {
-        this.showNotification(message, 'error');
-    }
+    showSuccess(message) { this.showNotification(message, 'success'); }
+    showError(message) { this.showNotification(message, 'error'); }
 
     showNotification(message, type) {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.textContent = message;
         document.body.appendChild(notification);
-
         setTimeout(() => {
             notification.style.animation = 'slideOutRight 0.4s ease';
             setTimeout(() => notification.remove(), 400);
@@ -104,7 +77,6 @@ class LoginManager {
     }
 }
 
-// Agregar estilos de animación shake
 const style = document.createElement('style');
 style.textContent = `
     @keyframes shake {
@@ -115,7 +87,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Inicializar el manejador de login
 let loginManager;
 document.addEventListener('DOMContentLoaded', () => {
     loginManager = new LoginManager();
