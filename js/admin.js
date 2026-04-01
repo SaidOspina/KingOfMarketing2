@@ -408,7 +408,7 @@ class AdminPanel {
                 </div>
                 <div class="form-group">
                     <label>URL de Imagen</label>
-                    <input type="text" name="image" value="${product?.image || '../img/ImgDetalle6.jpeg'}" required>
+                    <input type="text" name="image" value="${product?.image || 'https://2lxkl6mebm.ucarecd.net/a58a1635-a744-4bc1-9033-031b97b5b026/ImgDetalle6.jpeg'}" required>
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn-cancel" onclick="admin.closeModal()">Cancelar</button>
@@ -846,9 +846,9 @@ class AdminPanel {
         if (saved) return JSON.parse(saved);
 
         return [
-            { title: 'Creación 1', url: '../img/ImgDetalle2.jpeg' },
-            { title: 'Creación 2', url: '../img/ImgDetalle4.jpeg' },
-            { title: 'Creación 3', url: '../img/ImgDetalle8.jpeg' }
+            { title: 'Creación 1', url: 'https://2lxkl6mebm.ucarecd.net/bfd9e379-ca80-4dd8-94b9-b26dd05af867/ImgDetalle2.jpeg' },
+            { title: 'Creación 2', url: 'https://2lxkl6mebm.ucarecd.net/f58273aa-9c0e-42d5-8785-b2a746e3844d/ImgDetalle4.jpeg' },
+            { title: 'Creación 3', url: 'https://2lxkl6mebm.ucarecd.net/13aed6cb-8402-49fd-b965-c43592dcbf51/ImgDetalle8.jpeg' }
         ];
     }
 
